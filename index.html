@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isopor Moldura Sinop | Molduras, Fachadas e Construção em EPS</title>
+<meta name="description" content="Molduras, fachadas, marquises, placas e construção em EPS (isopor técnico) cortados sob medida em Sinop-MT. Mais leve, mais barato e muito mais durável que gesso e concreto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-2:#f6f8fa;
+    --bg-3:#edf1f5;
+    --blue:#1a6fc4;
+    --blue-2:#2383e2;
+    --blue-light:#e8f1fc;
+    --teal:#0d9e83;
+    --teal-light:#e4f7f3;
+    --text:#1a1e26;
+    --muted:#5c6b7e;
+    --line:#e2e8f0;
+    --white:#ffffff;
+    --radius:16px;
+    --shadow-sm:0 2px 12px rgba(26,111,196,.08);
+    --shadow:0 12px 40px rgba(26,111,196,.13);
+    --shadow-lg:0 24px 60px rgba(26,111,196,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+  h4,h5,h6,.label{font-family:'Manrope',sans-serif}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  section{position:relative}
+
+  /* BUTTONS */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;justify-content:center;
+    font-family:'Manrope';font-weight:700;font-size:.97rem;padding:15px 28px;
+    border-radius:12px;cursor:pointer;border:none;transition:all .2s ease;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;box-shadow:0 8px 24px rgba(26,111,196,.28)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(26,111,196,.38)}
+  .btn-ghost{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+  .btn-ghost:hover{background:var(--blue-light)}
+  .btn-teal{background:linear-gradient(135deg,var(--teal),#0db89a);color:#fff;box-shadow:0 8px 24px rgba(13,158,131,.25)}
+  .btn-teal:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(13,158,131,.38)}
+  .btn-lg{padding:18px 36px;font-size:1.08rem;border-radius:14px}
+
+  /* HEADER */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 16px rgba(0,0,0,.06);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{
+    width:44px;height:44px;border-radius:10px;
+    background:linear-gradient(135deg,var(--blue),var(--blue-2));
+    display:grid;place-items:center;flex-shrink:0;
+    box-shadow:0 6px 18px rgba(26,111,196,.28);
+  }
+  .brand .mark svg{width:26px;height:26px;fill:#fff}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-text strong{font-family:'Manrope';font-weight:800;font-size:1.05rem;color:var(--text);letter-spacing:-.3px}
+  .brand-text span{font-size:.74rem;color:var(--muted);font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a:not(.btn){color:var(--muted);font-size:.94rem;font-weight:600;transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--blue)}
+  .nav .btn{padding:11px 22px;font-size:.9rem}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--text);font-size:1.5rem}
+
+  /* SECTION SHELLS */
+  .section-pad{padding:100px 0}
+  .section-pad-sm{padding:72px 0}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--blue);margin-bottom:18px;
+  }
+  .kicker::before{content:"";width:20px;height:2px;background:var(--blue);border-radius:2px}
+  .section-title{font-size:clamp(2rem,4vw,2.9rem);color:var(--text);margin-bottom:18px}
+  .section-intro{color:var(--muted);font-size:1.08rem;max-width:60ch;line-height:1.75;margin-bottom:52px}
+  .text-center{text-align:center}
+  .mx-auto{margin-left:auto;margin-right:auto}
+
+  /* HERO */
+  .hero{
+    padding:152px 0 100px;
+    background:linear-gradient(160deg,#f0f6ff 0%,#ffffff 55%,#f0fdf9 100%);
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;
+    background:var(--blue-light);color:var(--blue);padding:8px 16px;border-radius:40px;
+    font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:1px solid rgba(26,111,196,.15);
+  }
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin-bottom:22px;color:var(--text)}
+  .hero h1 em{color:var(--blue);font-style:normal}
+  .hero .sub{font-size:1.13rem;color:var(--muted);margin-bottom:36px;max-width:52ch;line-height:1.75}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px}
+  .trust-bar{display:flex;flex-wrap:wrap;gap:20px;padding-top:32px;border-top:1px solid var(--line)}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--muted)}
+  .trust-item .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0}
+  /* hero visual side */
+  .hero-visual{position:relative}
+  .hero-img-wrap{
+    border-radius:24px;overflow:hidden;
+    background:linear-gradient(135deg,#dbeafe,#d1fae5);
+    aspect-ratio:4/3;display:grid;place-items:center;
+    box-shadow:var(--shadow-lg);border:1px solid var(--line);
+  }
+  .hero-img-wrap .placeholder-icon{font-size:5rem;opacity:.25}
+  .hero-badge{
+    position:absolute;bottom:-20px;left:-20px;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px;box-shadow:var(--shadow);
+    display:flex;gap:12px;align-items:center;
+  }
+  .hero-badge .icon{width:44px;height:44px;border-radius:10px;background:var(--teal-light);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0}
+  .hero-badge .txt strong{display:block;font-size:1.1rem;font-weight:800;color:var(--text)}
+  .hero-badge .txt span{font-size:.82rem;color:var(--muted)}
+  .hero-badge-2{
+    position:absolute;top:-16px;right:-16px;
+    background:var(--blue);color:#fff;border-radius:14px;
+    padding:14px 18px;box-shadow:var(--shadow);font-size:.88rem;font-weight:700;line-height:1.3;
+  }
+
+  /* OBJECTION BUSTER */
+  .objection{background:var(--text);color:#fff;overflow:hidden}
+  .objection-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 0}
+  .objection h2{color:#fff;font-size:clamp(1.9rem,3.5vw,2.7rem);margin-bottom:20px}
+  .objection h2 em{color:#60d4b8;font-style:normal}
+  .objection .sub{color:rgba(255,255,255,.7);font-size:1.06rem;margin-bottom:32px;line-height:1.75}
+  .proof-cards{display:grid;gap:14px}
+  .proof-card{
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;
+    transition:background .2s,border-color .2s;
+  }
+  .proof-card:hover{background:rgba(255,255,255,.11);border-color:rgba(96,212,184,.35)}
+  .proof-card .ic{font-size:1.8rem;flex-shrink:0;line-height:1;margin-top:2px}
+  .proof-card h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:4px}
+  .proof-card p{color:rgba(255,255,255,.6);font-size:.93rem}
+
+  /* QUEM SOMOS */
+  .about{background:var(--bg-2)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about-img{
+    border-radius:20px;overflow:hidden;
+    background:linear-gradient(135deg,var(--blue-light),var(--teal-light));
+    aspect-ratio:4/3;display:grid;place-items:center;
+    box-shadow:var(--shadow);border:1px solid var(--line);font-size:4rem;opacity:.3;
+  }
+  .about p{color:var(--muted);margin-bottom:18px;font-size:1.05rem;line-height:1.78}
+  .about p strong{color:var(--text)}
+  .steps{display:grid;gap:16px;margin-top:30px}
+  .step{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--bg);border:1px solid var(--line);border-radius:12px;transition:box-shadow .2s,border-color .2s}
+  .step:hover{box-shadow:var(--shadow-sm);border-color:rgba(26,111,196,.2)}
+  .step .num{width:36px;height:36px;border-radius:9px;background:var(--blue);color:#fff;font-weight:800;font-size:.95rem;display:grid;place-items:center;flex-shrink:0}
+  .step h5{font-size:1rem;font-weight:700;margin-bottom:3px;color:var(--text)}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* PRODUTOS */
+  .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .prod-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;
+    display:flex;flex-direction:column;
+  }
+  .prod-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(26,111,196,.25)}
+  .prod-icon{
+    width:56px;height:56px;border-radius:12px;display:grid;place-items:center;
+    font-size:1.7rem;margin-bottom:18px;
+    background:var(--blue-light);border:1px solid rgba(26,111,196,.15);
+  }
+  .prod-card h3{font-family:'Manrope';font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.3}
+  .prod-card p{color:var(--muted);font-size:.92rem;flex:1;margin-bottom:20px;line-height:1.65}
+  .prod-link{color:var(--blue);font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:7px;transition:gap .2s;margin-top:auto}
+  .prod-link:hover{gap:12px}
+
+  /* COMPARATIVO */
+  .compare{background:var(--bg-2)}
+  .compare-wrap{max-width:900px;margin:0 auto}
+  .compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .compare-table th{padding:18px 22px;font-size:.9rem;font-family:'Manrope';font-weight:700;text-align:left}
+  .compare-table td{padding:16px 22px;font-size:.95rem;border-top:1px solid var(--line)}
+  .compare-table thead th:first-child{background:var(--bg-3);color:var(--muted)}
+  .compare-table thead th:nth-child(2){background:var(--bg-3);color:var(--muted);text-align:center}
+  .compare-table thead th:nth-child(3){background:var(--blue);color:#fff;text-align:center}
+  .compare-table tbody tr:last-child td{border-bottom:none}
+  .compare-table tbody td:first-child{background:var(--bg-2);font-weight:600;color:var(--muted)}
+  .compare-table tbody td:nth-child(2){background:var(--bg);text-align:center;color:var(--muted)}
+  .compare-table tbody td:nth-child(3){background:#f0f6ff;text-align:center;font-weight:700;color:var(--blue)}
+  .bad{color:#d9534f}
+  .good{color:var(--teal)}
+
+  /* CORTE SOB MEDIDA */
+  .custom-cut{
+    background:linear-gradient(135deg,var(--blue) 0%,#1557a8 100%);
+    color:#fff;overflow:hidden;
+  }
+  .custom-cut-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;padding:90px 0}
+  .custom-cut h2{color:#fff;font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:20px}
+  .custom-cut .sub{color:rgba(255,255,255,.75);font-size:1.08rem;margin-bottom:36px;line-height:1.75}
+  .process-steps{display:grid;gap:16px}
+  .proc{display:flex;gap:18px;align-items:flex-start}
+  .proc .num{
+    width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.15);
+    color:#fff;font-weight:800;font-size:1.05rem;display:grid;place-items:center;flex-shrink:0;
+    border:1px solid rgba(255,255,255,.25);
+  }
+  .proc h5{color:#fff;font-size:1rem;font-weight:700;margin-bottom:4px}
+  .proc p{color:rgba(255,255,255,.65);font-size:.93rem}
+  .custom-visual{
+    border-radius:20px;overflow:hidden;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+    aspect-ratio:3/4;display:grid;place-items:center;font-size:5rem;opacity:.3;
+  }
+
+  /* PARA QUEM É */
+  .for-who{background:var(--bg-2)}
+  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .who-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;
+    transition:transform .22s,box-shadow .22s,border-color .22s;
+  }
+  .who-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(26,111,196,.2)}
+  .who-icon{font-size:2.2rem;margin-bottom:16px}
+  .who-card h4{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:8px}
+  .who-card p{color:var(--muted);font-size:.93rem;line-height:1.65}
+
+  /* DEPOIMENTOS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{
+    padding:30px 26px;border-radius:var(--radius);background:var(--bg);
+    border:1px solid var(--line);position:relative;transition:box-shadow .2s}
+  .quote:hover{box-shadow:var(--shadow-sm)}
+  .quote .stars{color:#f4a124;font-size:1.05rem;margin-bottom:16px;letter-spacing:2px}
+  .quote p{color:var(--text);font-size:1rem;margin-bottom:20px;font-style:italic;line-height:1.7}
+  .quote .who{font-weight:700;color:var(--blue);font-size:.92rem}
+  .quote .who span{color:var(--muted);font-weight:500}
+
+  /* FAQ */
+  .faq{background:var(--bg-2)}
+  .faq-list{max-width:780px;margin:0 auto;display:grid;gap:12px}
+  details{background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+  details[open]{border-color:var(--blue);box-shadow:var(--shadow-sm)}
+  summary{
+    cursor:pointer;padding:22px 24px;font-family:'Manrope';font-size:1rem;font-weight:700;color:var(--text);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;list-style:none;
+  }
+  summary::-webkit-details-marker{display:none}
+  .plus{
+    width:30px;height:30px;border-radius:7px;background:var(--blue-light);color:var(--blue);
+    display:grid;place-items:center;font-size:1.3rem;flex-shrink:0;transition:transform .25s;font-weight:400;
+  }
+  details[open] .plus{transform:rotate(45deg);background:var(--blue);color:#fff}
+  details .answer{padding:0 24px 22px;color:var(--muted);font-size:.98rem;line-height:1.75}
+
+  /* CTA FINAL */
+  .final-cta{
+    background:linear-gradient(160deg,#f0f6ff 0%,#ffffff 50%,#e4f7f3 100%);
+    text-align:center;padding:110px 0;
+  }
+  .final-cta h2{font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:20px}
+  .final-cta p{color:var(--muted);font-size:1.12rem;max-width:52ch;margin:0 auto 38px;line-height:1.75}
+  .cta-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .final-cta .note{margin-top:20px;color:var(--muted);font-size:.9rem}
+
+  /* FOOTER */
+  footer{background:var(--text);color:rgba(255,255,255,.85);padding:60px 0 28px}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  .footer-brand .brand{margin-bottom:16px}
+  .footer-brand .brand .brand-text strong,.footer-brand .brand .brand-text span{color:rgba(255,255,255,.9)}
+  .footer-brand p{color:rgba(255,255,255,.5);font-size:.94rem;max-width:36ch;line-height:1.7}
+  footer h5{font-weight:800;color:#fff;margin-bottom:18px;font-size:.95rem;text-transform:uppercase;letter-spacing:.8px}
+  footer ul{list-style:none;display:grid;gap:12px}
+  footer ul li{color:rgba(255,255,255,.55);font-size:.94rem;display:flex;gap:10px;align-items:flex-start}
+  footer ul li a{color:rgba(255,255,255,.55);transition:color .2s}
+  footer ul li a:hover{color:#fff}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;color:rgba(255,255,255,.35);font-size:.88rem}
+
+  /* WA FLOAT */
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:60;
+    width:62px;height:62px;border-radius:50%;background:#25D366;
+    display:grid;place-items:center;box-shadow:0 10px 28px rgba(37,211,102,.45);
+    transition:transform .2s;animation:wapulse 2.5s infinite;
+  }
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:34px;height:34px;fill:#fff}
+  @keyframes wapulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* RESPONSIVE */
+  @media(max-width:1024px){
+    .products-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:900px){
+    .hero-grid,.about-grid,.objection-inner,.custom-cut-inner{grid-template-columns:1fr;gap:40px}
+    .hero-visual{display:none}
+    .testi-grid,.who-grid{grid-template-columns:1fr 1fr}
+    .footer-grid{grid-template-columns:1fr;gap:32px}
+    .compare-table{font-size:.88rem}
+    .compare-table th,.compare-table td{padding:13px 14px}
+  }
+  @media(max-width:640px){
+    .nav-links{
+      position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:0;
+      background:#fff;border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .3s ease;box-shadow:0 8px 20px rgba(0,0,0,.1);
+    }
+    .nav-links.open{max-height:500px}
+    .nav-links a:not(.btn){width:100%;padding:16px 24px;border-top:1px solid var(--line);display:block}
+    .nav-links .btn{margin:16px 24px;width:calc(100% - 48px)}
+    .menu-toggle{display:block}
+    .products-grid{grid-template-columns:1fr}
+    .testi-grid,.who-grid{grid-template-columns:1fr}
+    .section-pad{padding:70px 0}
+    .hero{padding:120px 0 72px}
+    .hero-cta{flex-direction:column}
+    .cta-group{flex-direction:column;align-items:center}
+    .trust-bar{gap:14px}
+    .objection-inner{padding:60px 0}
+    .custom-cut-inner{padding:68px 0}
+    .custom-visual{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======== HEADER ======== -->
+<header>
+  <div class="container nav">
+    <a href="#topo" class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 24 24"><path d="M4 5c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v2c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V5zm2 5h12v9H6V10z"/></svg>
+      </div>
+      <div class="brand-text">
+        <strong>Isopor Moldura</strong>
+        <span>Sinop — MT</span>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#sobre">Quem Somos</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#comparativo">Comparativo</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/5566997771298?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn-primary">Orçamento grátis</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="topo">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow reveal">Isopor técnico (EPS) · Sinop e região</div>
+        <h1 class="reveal">Tudo que você via em cimento, gesso ou concreto — agora em isopor. <em>Mais leve, mais rápido, mais barato</em> e muito mais durável do que você imagina.</h1>
+        <p class="sub reveal">Molduras, fachadas, marquises, bosieres, placas e construção completa em EPS — cortados exatamente do jeito que você quer. Qualquer formato, qualquer detalhe. A gente projeta e corta.</p>
+        <div class="hero-cta reveal">
+          <a href="https://wa.me/5566997771298?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1a8 8 0 0 0 3.8 1h.3a8 8 0 0 0 5.6-13.4Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3.4Zm3.6-4.9c-.2-.1-1.2-.6-1.4-.6s-.3-.1-.5.1-.5.6-.6.8-.3.2-.5.1a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 .1-.1 0-.3 0-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3h-.4a.8.8 0 0 0-.6.3 2.4 2.4 0 0 0-.7 1.8 4.2 4.2 0 0 0 .9 2.2 9.5 9.5 0 0 0 3.6 3.2c1.3.6 1.8.6 2.5.5a2.1 2.1 0 0 0 1.4-1 1.7 1.7 0 0 0 .1-1c0-.1-.2-.2-.4-.3Z"/></svg>
+            Pedir orçamento agora
+          </a>
+          <a href="#produtos" class="btn btn-ghost btn-lg">Ver o que fazemos</a>
+        </div>
+        <div class="trust-bar reveal">
+          <div class="trust-item"><span class="dot"></span>Corte sob medida</div>
+          <div class="trust-item"><span class="dot"></span>Qualquer formato</div>
+          <div class="trust-item"><span class="dot"></span>Uso externo e interno</div>
+          <div class="trust-item"><span class="dot"></span>Aguenta peso humano</div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-img-wrap" style="background:none;padding:0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczNIs2d9LUA_D-L0DyNVhDFXPBZmfVgc1DiPaWfR_yCsKrP7YeFHcj8DJkGGOJO_oXus7AsAgJFRLkV-b_0_t2fnr3hlmOl_IGNHVGbecjvBCMCaXRjIpxmF5dQ5vZE2emFE-QNteK3BpaEADElCXdkgDZXmHTd0M_ugYFN7Lq_oNsdoksR5dyaJbb0vSbaA7ApcqhXw9EQVqKvO8ZcxEG3U5Aqj-zFziO56ENCSvLLmaB6FaKirhyzRETxF0XV5dNTJqtBGODHtzf3xQwf5kdL9uVwoIHaUB5aLOrAKjDRk8RqKO2oL6BcMTvLbUkgQeSmnRK9D4jPymxa-qTnULERzMocJBpJgprPyEdHXLH2YEC4xdjTwNYYg6xgsC2sHmm4h6eUfSmvJLN-XhlCsV0GyfkqeQv3rPj0VwQYMT6t9vtJ3OPYUCK90_nPpDOHjYdfsZEqbGfhInYXu1-M9oyj0duGHpIpRkypAERmGtC12bgH1B2rnqqXJCupwZnuu4HY8_Xdlh-PC7iD0yDI1gUYLmD-dvglTrYDWtJ86d1YKWdKF9ru8mUW23t2Hp10OS5QuFlYcHUZdh2Lc8-a2GQN8asKK9O4e9q8JfIqTrEyiloRtpw76T-mrt_6gA7GbEicg7nZeUB44wNiQewYuDLJjio0kdvTth8Rkl6hA6W1EREl4ErzSEOvqekmeyIeC6tSyJI5K0_A_3uJRWVuiLZPUSoLsez_DLlICz6KnFk7ILeA9t89vg1Klurkmj-TT2huh25y1KkXbGo2rTZQeaIjAOP-9TFkkk1bFz1Ofxd5JWnNMcW6k4bKoAXHnuNZfkmzGgaK9QJUMV4q2Em9qHkQFipRmbIdOGU4biCbY7uU-5Z6EIR9YXiR3Xff4MsrhUkoocryhoMjOp3y4LOv_tMZkxR0N2mdEd5neMJSuTyJbHGTb__KFbzA85Fm2QSQHhii-5kr02s9WY9k-WzhqxOuqfN_H5BdSOCX8dXgjoTie1w_2P3VXBBVTNj7k5zdZR-kyfkOEk3cLim_CNya15w=w1200" alt="Fachada com moldura de EPS acabada" style="width:100%;height:100%;object-fit:cover;border-radius:24px">
+        </div>
+        <div class="hero-badge">
+          <div class="icon">✂️</div>
+          <div class="txt">
+            <strong>Qualquer formato</strong>
+            <span>Projetamos e cortamos sob medida</span>
+          </div>
+        </div>
+        <div class="hero-badge-2">EPS revestido<br>aguenta peso humano ✓</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== QUEBRA DE OBJEÇÃO ======== -->
+<section class="objection">
+  <div class="container">
+    <div class="objection-inner">
+      <div class="reveal">
+        <div class="kicker" style="color:#60d4b8"><span style="background:#60d4b8"></span>A verdade sobre o EPS</div>
+        <h2>"Mas isopor não é <em>fraco</em>?" — Essa dúvida acaba aqui.</h2>
+        <p class="sub">Todo mundo já ouviu: "isopor é frágil, não aguenta." Faz sentido pensar assim — mas é o maior mito que existe. As peças que saem da Isopor Moldura Sinop recebem um <strong style="color:#fff">revestimento especial de massa texturizada</strong> que transforma o EPS em algo extraordinariamente resistente. Pode riscar, bater, molhar, expor ao sol — aguenta tudo.<br><br>E para provar: um ser humano adulto pode <strong style="color:#60d4b8">andar em cima de uma placa revestida sem quebrar.</strong></p>
+        <a href="https://wa.me/5566997771298?text=Quero%20entender%20mais%20sobre%20a%20resist%C3%AAncia%20do%20EPS" target="_blank" rel="noopener" class="btn btn-teal">Quero entender melhor →</a>
+      </div>
+      <div class="proof-cards reveal">
+        <div class="proof-card"><div class="ic">🏋️</div><div><h4>Aguenta peso humano</h4><p>Pode pisar, pode apoiar. Placa revestida não quebra sob pressão real.</p></div></div>
+        <div class="proof-card"><div class="ic">☀️</div><div><h4>Resistente a sol e chuva</h4><p>Testado para uso externo sem deformar, sem absorver umidade.</p></div></div>
+        <div class="proof-card"><div class="ic">🔨</div><div><h4>Absorve impacto</h4><p>Muito mais que o gesso tradicional. Não racha com pequenos choques.</p></div></div>
+        <div class="proof-card"><div class="ic">🏠</div><div><h4>Dura décadas</h4><p>Sem manutenção. Sem queda. Sem rachado. Zero problema futuro.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== QUEM SOMOS ======== -->
+<section class="about section-pad" id="sobre">
+  <div class="container about-grid">
+    <div class="about-img reveal" style="font-size:0;opacity:1;background:none;padding:0;overflow:hidden">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczNJ49uhVxaxAesafVTdEiNioSkZtD3GRjd2pseXQdgcW5bdt5hGhksLmEtjtzVi1CKumnEaYk3A1PhoR1J_zkIwnbn_67sPEY5uXv1l54g7iB4O6IwZqBnWzN6SQfBJyAS1Cw61HchUsxNCLW9VSd9nV0vUeScITdMoqNTyEU2eRIPeWAbsEtuMc06Vgl7Hha9oXYwpwkJnhmVpB8OoqeM0KzlIiEE7XBj4VQLnyVFGdxmsLNKn1YTXiwNjUdGoIzQVUpObfNbtPje7Tc_60DCqe6xuPsudsZlrzja0hfLvqleyYmSvJ5YgXsHmCNnsV9N7Bfv52FGwwkWDc3t35-qAJVRBBxnSv2dPlwrZ_u8Q7IlPKFix2PF4eU1nXVsdq_4roDCzSNEQpEEYFFffn8IbdH-l3dAwWAejJgW88XCjVQOIEkrfBGsAlBVFZW4Q_t3deirs9-9PsHySVcXmMtCF69YifK81-RwU7PjUa7ob1SNePOK97b-BVR8YDs8fqEA_SeFd8kcnfeb7oRnyZcG4vPGki6w4bx8Ntj5svgcjAUWUCfafutS_UqBJ3jklwDE75cwiGhgtQ9chQs7HnfuyxgkaIw2N_jGeFZniSkgiYuR7Qig_VpB6le8Zj-fPUCbsfp28k-tDNh2zDvUavpjcxx2ly1Jq4W4DJe92lzJkf1OjDFJJT5gxpcEj03iL0NMKMQGTFZgxbYc83Wn0QPId0HvWfQwYZ7wgNQCxK-f3pH36ZRwClx_KcUx6EBMa9HzUTCwCYEPhSuNiib0w5mVuy6JJaSxyjGMARmHwQP_mJzxSMtipmU45g1YVbpuYexZw2ztEePC2ojKqGPeWjGdgf896yHyqMfveNUy2yaVT0YTVbpBh71sG_tEWaoKiNO8OyjyS6utFRWQbKEIlAH0zVA2XGiDhfiBrnd6YCfDhEiX0_CmmDSssdZykg5RVcddq9jr9uF8upVGPAVlSCOAF2TDp3kvLhnWH8nu19ZWTJqpDXceeNudLMaBVOgnCEq-L5g_DCvjJC9fkbvNpPg=w1200" alt="Corte de EPS na oficina" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="reveal">
+      <div class="kicker">Quem somos</div>
+      <h2 class="section-title">Em Sinop, a gente corta qualquer coisa — do jeito que você imaginou.</h2>
+      <p>A Isopor Moldura Sinop nasceu pra acabar com a ideia de que beleza arquitetônica exige obra pesada, sujeira, prazo longo e custo alto. Trabalhamos com <strong>EPS (isopor técnico) de alta densidade</strong>, projetando e cortando cada peça sob medida.</p>
+      <p>Seja para uma moldura que você viu numa revista, uma fachada personalizada pro seu comércio, ou um detalhe de decoração interna que você desenhou numa folha de papel. <strong>Traga o projeto, a foto, o rascunho ou a ideia. Se dá pra imaginar, a gente corta.</strong></p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h5>Você traz a ideia</h5><p>Foto, rascunho, medida ou referência — qualquer coisa serve.</p></div></div>
+        <div class="step"><div class="num">2</div><div><h5>A gente projeta</h5><p>Ajustamos cada detalhe com você antes de cortar.</p></div></div>
+        <div class="step"><div class="num">3</div><div><h5>Cortamos com precisão</h5><p>CNC e corte manual de alta precisão, sem erro de milímetro.</p></div></div>
+        <div class="step"><div class="num">4</div><div><h5>Instalação rápida</h5><p>Limpa, sem entulho, sem quebrar parede. Pronto em horas.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PRODUTOS ======== -->
+<section class="section-pad" id="produtos" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">O que fazemos</div>
+      <h2 class="section-title mx-auto">Do acabamento à construção — tudo em EPS.</h2>
+      <p class="section-intro mx-auto">Esquece cimento, concreto e gesso. Cada produto abaixo é mais leve, mais rápido de instalar e mais barato — sem abrir mão da estética ou da resistência.</p>
+    </div>
+    <div class="products-grid">
+      <div class="prod-card reveal">
+        <div class="prod-icon">🪟</div>
+        <h3>Molduras Internas e Externas</h3>
+        <p>Esqueça o gesso. Molduras de teto, parede, janela e porta — qualquer perfil, qualquer detalhe. Mais leves, mais fáceis de instalar e sem risco de cair ou rachar.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20moldura%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero moldura →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">🏢</div>
+        <h3>Fachadas Externas</h3>
+        <p>Transforme a cara do seu imóvel sem obra pesada. Chegam prontas, instalam rápido e duram décadas expostas ao sol e chuva — com uma fração do custo do concreto.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20fachada%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero fachada →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">🌂</div>
+        <h3>Marquises</h3>
+        <p>Elegância na entrada do seu imóvel sem o peso do concreto. Marquises em EPS para residências e comércios — instalação muito mais rápida e simples.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20marquise%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero marquise →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">🧱</div>
+        <h3>Blocos Falsos e Placas de Parede</h3>
+        <p>Visual de pedra, tijolinho ou bloco — sem nada disso de verdade. Aplicados em EPS com precisão, muito mais leve, sem sobrecarga na estrutura.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20blocos%20e%20placas%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero blocos e placas →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">✨</div>
+        <h3>Placas para Forro</h3>
+        <p>Forro decorado sem gesso, sem peso e sem espera. Placas em EPS lisas ou trabalhadas, com moldura integrada — sem risco de infiltração causar rachaduras.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20forro%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero forro em EPS →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">🎨</div>
+        <h3>Bosieres</h3>
+        <p>O detalhe que eleva qualquer ambiente — instalado em horas. Bosieres em EPS para parede e teto, no formato e tamanho que o seu projeto pede.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20bosieres%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero bosieres →</a>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">💧</div>
+        <h3>Pingadeiras e Rufos</h3>
+        <p>Proteção e acabamento externo sem concreto. Pingadeiras e rufos em EPS revestido para fachadas — resistentes à água, ao sol e ao tempo.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20pingadeira%20ou%20rufo%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Quero pingadeira / rufo →</a>
+      </div>
+      <div class="prod-card reveal" style="border-color:rgba(26,111,196,.25);background:var(--blue-light)">
+        <div class="prod-icon" style="background:#fff;border-color:rgba(26,111,196,.2)">🏠</div>
+        <h3>Construção com Placas de EPS</h3>
+        <p>Casas inteiras construídas em EPS — mais rápido, mais barato e com excelente isolamento térmico e acústico. Resultado final idêntico à alvenaria convencional.</p>
+        <a href="https://wa.me/5566997771298?text=Quero%20saber%20sobre%20constru%C3%A7%C3%A3o%20em%20EPS" target="_blank" rel="noopener" class="prod-link">Saiba mais →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== COMPARATIVO ======== -->
+<section class="compare section-pad" id="comparativo">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">Comparativo</div>
+      <h2 class="section-title mx-auto">Gesso, concreto ou EPS? Veja a diferença na prática.</h2>
+      <p class="section-intro mx-auto">Os números e fatos que você precisa saber antes de decidir.</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Gesso / Concreto</th>
+            <th>✦ EPS Revestido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Peso</td><td class="bad">Pesado — exige estrutura reforçada</td><td class="good">Levíssimo — qualquer estrutura</td></tr>
+          <tr><td>Instalação</td><td class="bad">Dias ou semanas de obra</td><td class="good">Concluída em horas</td></tr>
+          <tr><td>Sujeira na obra</td><td class="bad">Muita — entulho pesado</td><td class="good">Quase nenhuma</td></tr>
+          <tr><td>Manutenção</td><td class="bad">Racha, descasca, pode cair</td><td class="good">Praticamente zero</td></tr>
+          <tr><td>Resistência a impacto</td><td class="bad">Quebra com pancadas</td><td class="good">Absorve impacto</td></tr>
+          <tr><td>Resistência externa</td><td class="bad">Absorve umidade com o tempo</td><td class="good">Impermeável ao clima</td></tr>
+          <tr><td>Custo total</td><td class="bad">Alto (produto + mão de obra)</td><td class="good">Muito menor</td></tr>
+          <tr><td>Personalização</td><td class="bad">Limitada e cara</td><td class="good">Qualquer formato imaginado</td></tr>
+          <tr><td>Aguenta peso humano?</td><td>Sim</td><td class="good">✓ Sim — testado e aprovado</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center reveal" style="margin-top:44px">
+      <a href="https://wa.me/5566997771298?text=Vi%20o%20comparativo%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Quero trocar para EPS agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CORTE SOB MEDIDA ======== -->
+<section class="custom-cut">
+  <div class="container">
+    <div class="custom-cut-inner">
+      <div class="reveal">
+        <div class="kicker" style="color:#a5d8ff"><span style="background:#a5d8ff"></span>Nosso diferencial</div>
+        <h2>Qualquer formato. Qualquer detalhe. Qualquer ideia.</h2>
+        <p class="sub">Você não precisa se adaptar ao que temos em estoque. Você não precisa abrir mão do detalhe que sonhou porque "não tem nesse formato". Trouxe uma foto? A gente reproduz. Fez um rascunho? A gente projeta. Viu numa revista? A gente corta. Quer algo que nunca existiu? A gente cria.</p>
+        <div class="process-steps">
+          <div class="proc"><div class="num">1</div><div><h5>Você traz a ideia</h5><p>Foto, rascunho, medida ou referência — qualquer coisa serve.</p></div></div>
+          <div class="proc"><div class="num">2</div><div><h5>A gente projeta</h5><p>Ajustamos cada detalhe com você antes de qualquer corte.</p></div></div>
+          <div class="proc"><div class="num">3</div><div><h5>Cortamos com precisão</h5><p>CNC e corte manual de alta precisão, sem erro de milímetro.</p></div></div>
+          <div class="proc"><div class="num">4</div><div><h5>Entrega e instalação</h5><p>Rápida, limpa, sem entulho, sem quebrar parede.</p></div></div>
+        </div>
+        <div style="margin-top:32px">
+          <a href="https://wa.me/5566997771298?text=Tenho%20uma%20ideia%20e%20quero%20um%20corte%20sob%20medida" target="_blank" rel="noopener" class="btn" style="background:#fff;color:var(--blue);font-weight:800">Quero um corte sob medida →</a>
+        </div>
+      </div>
+      <div class="custom-visual reveal" style="font-size:0;opacity:1;overflow:hidden;border-radius:20px">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMjdp6ukdM1bqI-PfN0nRn8llK7yxGh9eEtVpot6n2xlos3i414cEYdNsPYM5DwVo-tHjXnCmj8GcoW-qh8GwdCACDnihUa6T7UP1dENhww9e92hyfqq8JK1tQ1hrUdoZkfyF1-6cwpM7B2UcRY_upR7pbWta3UL0CLRMS42EvPbbUyzGAgb0__o2bGp_WYo0c1K9xqcqkUbK9laZdSGp0xR2-1KrmDBtTxGnuxB9igVck24UZY7UwSNInGPqaEjjn9vX4hUgFXrl-fTamS8ieJERC4jUIMY8tEr1_VVYBdR4NMV70LcDC6SMsyF6kLya7AdgMLdWG2Bgdon4ONmHTraHI1kcs6m6aebMbGqK2iAHcffOEPckymZc89sq5RL-lpOgogDe9olF-LbGuOS8KwcdxHrDGSo-yDoRyB9FuhjExKHyhXWqj_HQ5--ydzfK_Miz895nNDuoyzjHuweOKKxhmcJeUWRnGNsTUxmIQ5CIdYYHUxTJ0T4DK_gHv_tHXimkYB2b0oMz9TmbLhJ4KVH2baZ4XtSsPXcbfIeEwm5okXfdDybZBikeDSaCwJCMQD1X7IomTpVpPFHfaj5L3Lt-DuEHwmdWMtrr0VL1Bjt8bG_s7_W4J4ntc-w0sq1dzZcHz2PS5R32cBcKwIzc6pNq4ul1LrHVDHXaBvNUcG5MUpJrpCseQiMd-B9CVgGXAY9cj__Uw-rbwVHXj7nqClSBf9yaj8yPegXsANh5c6b54Wx0STLa2QVnw8YmWWZnkjsz-Nn_rCd5Y-kvs_sPHWxODhBmzrHiL7LmT-xecJwebVBPl1xBs9bzJz-JARHwAFjmvzoXmrZTxhXY-9TrRK1WHAI0Hp3g7OxAyu-Ktn1YyZfOfs5MQPk7GW08MHU9B9FCZD7yyimfk5b1c3tHog-SQairtfQcBJaPOwXh4fJAMXj7j5rlLXG1R3NfwNCYfbqS4LXNGGn4maWJaeVMf3U3wNEVigiP_rIys_RcECosgj2FYHS3-e19DPs1ruN71754MBUXi3r6h1Cwi8Uw=w1200" alt="Fachada com moldura EPS" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PARA QUEM É ======== -->
+<section class="for-who section-pad">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">Para quem é</div>
+      <h2 class="section-title mx-auto">Para quem é a Isopor Moldura Sinop?</h2>
+      <p class="section-intro mx-auto">De proprietários de imóveis a construtoras — qualquer um que precise de acabamento ou construção com leveza, velocidade e custo real.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal"><div class="who-icon">🏠</div><h4>Proprietários de imóveis</h4><p>Quer valorizar a fachada ou decorar o interior sem obra pesada, entulho e meses de espera. EPS resolve em horas.</p></div>
+      <div class="who-card reveal"><div class="who-icon">🏗️</div><h4>Construtores e empreiteiros</h4><p>Velocidade, economia e resultado profissional. EPS reduz prazo de obra e custo de mão de obra drasticamente.</p></div>
+      <div class="who-card reveal"><div class="who-icon">🛍️</div><h4>Donos de comércio</h4><p>Fachada chamativa e identidade visual no imóvel — rápido, barato e sem fechar o ponto por semanas.</p></div>
+      <div class="who-card reveal"><div class="who-icon">🎨</div><h4>Arquitetos e designers</h4><p>Executam projetos personalizados com orçamento controlado. Qualquer forma, qualquer detalhe — sem limitação.</p></div>
+      <div class="who-card reveal"><div class="who-icon">🔨</div><h4>Pedreiros e acabadores</h4><p>Ofereça ao seu cliente mais opções com menos esforço de instalação — e mais margem pra você.</p></div>
+      <div class="who-card reveal"><div class="who-icon">🌿</div><h4>Quem quer economizar</h4><p>EPS custa menos no produto e na mão de obra. O resultado visual é idêntico — o bolso agradece.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== DEPOIMENTOS ======== -->
+<section class="section-pad" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">Depoimentos</div>
+      <h2 class="section-title mx-auto">Quem usou, não voltou mais pro gesso.</h2>
+      <p class="section-intro mx-auto" style="margin-bottom:52px">Resultados reais de clientes em Sinop e região.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"[Depoimento real — resultado visual, facilidade de instalação, custo que surpreendeu positivamente]"</p>
+        <div class="who">[Nome do cliente] <span>— [profissão / cidade]</span></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"[Depoimento real — fachada ou moldura externa que durou e surpreendeu pela resistência]"</p>
+        <div class="who">[Nome do cliente] <span>— [profissão / cidade]</span></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"[Depoimento real — achava que ia ser frágil, ficou impressionado com a resistência do produto revestido]"</p>
+        <div class="who">[Nome do cliente] <span>— [profissão / cidade]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ ======== -->
+<section class="faq section-pad" id="faq">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">Perguntas frequentes</div>
+      <h2 class="section-title mx-auto">Ainda tem dúvida? A gente responde.</h2>
+      <p class="section-intro mx-auto" style="margin-bottom:52px">As perguntas que a gente mais recebe — respondidas com honestidade.</p>
+    </div>
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>Isopor não é frágil? <span class="plus">+</span></summary>
+        <div class="answer">Com o revestimento que aplicamos, não. A placa revestida aguenta impacto, peso e intempéries — uma pessoa adulta pode andar em cima sem quebrar. É EPS técnico revestido com massa impermeabilizante, não o isopor cru de embalagem de eletrodoméstico.</div>
+      </details>
+      <details class="reveal">
+        <summary>Funciona para uso externo? <span class="plus">+</span></summary>
+        <div class="answer">Sim. Nossas peças externas recebem massa impermeabilizante e texturizada que resiste ao sol, à chuva e à variação de temperatura de Mato Grosso. É exatamente para isso que foram desenvolvidas.</div>
+      </details>
+      <details class="reveal">
+        <summary>Quanto tempo dura? <span class="plus">+</span></summary>
+        <div class="answer">Décadas. Não racha, não absorve umidade, não cai e não precisa de manutenção como o gesso convencional. Uma vez instalado, esquece.</div>
+      </details>
+      <details class="reveal">
+        <summary>Vocês fazem qualquer formato? <span class="plus">+</span></summary>
+        <div class="answer">Sim. Esse é o nosso maior diferencial. Trouxe foto, rascunho ou medida — a gente projeta e corta exatamente o que você precisa. Sem adaptação, sem padrão de prateleira.</div>
+      </details>
+      <details class="reveal">
+        <summary>Quanto tempo leva para instalar? <span class="plus">+</span></summary>
+        <div class="answer">Horas, não dias. Sem quebrar parede, sem entulho pesado, sem a bagunça de uma obra convencional. O EPS é leve e as peças chegam prontas — é só fixar.</div>
+      </details>
+      <details class="reveal">
+        <summary>O preço é realmente menor que o gesso e o concreto? <span class="plus">+</span></summary>
+        <div class="answer">Sim — tanto no produto quanto na mão de obra de instalação. A leveza do EPS reduz o tempo de instalação drasticamente, e o material em si custa menos. A economia aparece dos dois lados.</div>
+      </details>
+      <details class="reveal">
+        <summary>Atendem fora de Sinop? <span class="plus">+</span></summary>
+        <div class="answer">Atendemos Sinop e toda a região de Mato Grosso. Entre em contato e a gente verifica a disponibilidade para o seu município.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======== GALERIA ======== -->
+<section class="section-pad" id="galeria" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal text-center">
+      <div class="kicker mx-auto" style="justify-content:center">Nossos trabalhos</div>
+      <h2 class="section-title mx-auto">Cada obra, uma prova de que isopor vai além.</h2>
+      <p class="section-intro mx-auto" style="margin-bottom:52px">Do corte sob medida à fachada finalizada — resultados reais de clientes em Sinop e região.</p>
+    </div>
+    <style>
+      .gallery{columns:3;gap:16px}
+      .gallery-item{break-inside:avoid;margin-bottom:16px;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
+      .gallery-item img{width:100%;display:block;transition:transform .35s ease}
+      .gallery-item:hover img{transform:scale(1.04)}
+      .gallery-item::after{content:"🔍";position:absolute;inset:0;display:grid;place-items:center;font-size:1.8rem;background:rgba(26,111,196,.35);opacity:0;transition:opacity .25s}
+      .gallery-item:hover::after{opacity:1}
+      .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:200;display:none;place-items:center;padding:20px}
+      .lightbox.open{display:grid}
+      .lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;object-fit:contain}
+      .lightbox-close{position:fixed;top:20px;right:26px;font-size:2.2rem;color:#fff;cursor:pointer;background:none;border:none;line-height:1}
+      .lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:2rem;cursor:pointer;padding:14px 18px;border-radius:10px;transition:background .2s}
+      .lightbox-nav:hover{background:rgba(255,255,255,.3)}
+      .lb-prev{left:14px}
+      .lb-next{right:14px}
+      @media(max-width:700px){.gallery{columns:2}}
+      @media(max-width:460px){.gallery{columns:1}}
+    </style>
+    <div class="gallery reveal">
+      <div class="gallery-item" onclick="openLb(0)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNIs2d9LUA_D-L0DyNVhDFXPBZmfVgc1DiPaWfR_yCsKrP7YeFHcj8DJkGGOJO_oXus7AsAgJFRLkV-b_0_t2fnr3hlmOl_IGNHVGbecjvBCMCaXRjIpxmF5dQ5vZE2emFE-QNteK3BpaEADElCXdkgDZXmHTd0M_ugYFN7Lq_oNsdoksR5dyaJbb0vSbaA7ApcqhXw9EQVqKvO8ZcxEG3U5Aqj-zFziO56ENCSvLLmaB6FaKirhyzRETxF0XV5dNTJqtBGODHtzf3xQwf5kdL9uVwoIHaUB5aLOrAKjDRk8RqKO2oL6BcMTvLbUkgQeSmnRK9D4jPymxa-qTnULERzMocJBpJgprPyEdHXLH2YEC4xdjTwNYYg6xgsC2sHmm4h6eUfSmvJLN-XhlCsV0GyfkqeQv3rPj0VwQYMT6t9vtJ3OPYUCK90_nPpDOHjYdfsZEqbGfhInYXu1-M9oyj0duGHpIpRkypAERmGtC12bgH1B2rnqqXJCupwZnuu4HY8_Xdlh-PC7iD0yDI1gUYLmD-dvglTrYDWtJ86d1YKWdKF9ru8mUW23t2Hp10OS5QuFlYcHUZdh2Lc8-a2GQN8asKK9O4e9q8JfIqTrEyiloRtpw76T-mrt_6gA7GbEicg7nZeUB44wNiQewYuDLJjio0kdvTth8Rkl6hA6W1EREl4ErzSEOvqekmeyIeC6tSyJI5K0_A_3uJRWVuiLZPUSoLsez_DLlICz6KnFk7ILeA9t89vg1Klurkmj-TT2huh25y1KkXbGo2rTZQeaIjAOP-9TFkkk1bFz1Ofxd5JWnNMcW6k4bKoAXHnuNZfkmzGgaK9QJUMV4q2Em9qHkQFipRmbIdOGU4biCbY7uU-5Z6EIR9YXiR3Xff4MsrhUkoocryhoMjOp3y4LOv_tMZkxR0N2mdEd5neMJSuTyJbHGTb__KFbzA85Fm2QSQHhii-5kr02s9WY9k-WzhqxOuqfN_H5BdSOCX8dXgjoTie1w_2P3VXBBVTNj7k5zdZR-kyfkOEk3cLim_CNya15w=w1200" alt="Fachada com moldura EPS" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(1)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNPdnCswNouhG0Ocka5pRyujhQN_bal7Ypa05Pt2tM1BaMBtB8dSn-2ToFsqOCLFD_5o9UoSuB3XyBtuY9RNsXs-r9UBVLnHdQOEvznNJfVuI2NDE-rCzKArhO1XpnUTBguVzoVvQj1oNvznCmsbQO6EPOzx0_ehD_owfoUbxatGQj7f2hRexiKjKCmG1ENUCZksFn6LPB7z2HUWPFFYJy5T_lAFBU5bwTx_PCUTW07wPUG5wjQNaZO0m1gdZfAS3sAOPyrTKQGDVwnPfUeXUJtQfUXqY8_AHucb06hB6uXvID-vhZm2Bmie3hyRiBQXbzc6p8r7vvEIMTCEL9JGAMI5JNcOcKMnnI3yMyM7xWX5SclMogM1xn9tUxKV2JHa9WPtlJl0FaAzRjLAbuy21nM7xTSZwKEComZO28YfTKfbJny3nch3c6BvOXxpGxWlXpg8qqE39LLe68G1OS6KpEX2t7hkj7zQfDCIVjjv5NTh23pZy3hivVsTlL3-RX2R5U_KewQzYzh2yFxcnh9HoGoZUb6SCjELiFBEfpi0XP6jcy8BQ9nwtSb1G_y1fXqcS3WS7tIZrUFB6K6rZzdl8bevzcdvguwsxYt9e1tabYe13dVf3nzFZKC--Jqe3IarGAASBcR_NV4Z2C4FtviyqraWXocKRhc_RMOeM02kHOh3FgFUgiIR3M7ciaStEwGhTppF3SJRC1lRg4SmR9Beo_JIcYK5i4HJKDE2ApHeG3Gwt-QPeWkhQWAR5_lwrMTRncD6MgYIZllu69wet5C2TbyaUtAo5SnB3Q-VtRd1RPu4sCfqYbJ5J2P2azRDLR-7O4bInjUcJ6UcKNF7VGQ5RhLPJPfrNpDjwLFNYo-rHm9mrAv-J_A81fokeeXjQgUGhz9xA03nKXHWBvo0pysZrJ08Dk65ir52_oQuSOcgOvlVi-8XnrGOdixCmlvsKWnlxVMwTgtSKyy9fikaO9__WFUabSJJSgqaU28rVYO25Lb-sSBDFbSIUBrFOcJTC-6R_XSyPLeN8sZPXAXBIHjrw=w1200" alt="Moldura EPS acabada" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(2)"><img src="https://lh3.googleusercontent.com/pw/AP1GczP8Myk6GW6NnroWBXsBiRZZUaGH--AyNOhwZ6_QxRvfr9sCIOvyXDTlwJ7arNADG3Cmlts7DgJqsKAxFJuyrvb3UsrYSHRsFz9A8K7mp1rVdIEcoDIkLjgeBb1MMtkyYzRHy4Gfh1MfW_rEsnOOaEMXqbsfp8Gyv4SwDgav1_onJC5Fb4lVd5gLyXL5KEe7VPY7rH3lNG6xcIcT870hFMN96W8TIKH1vFsYWB1Xib-KgCP5sFZTfoF68kWLEptWq2wyOxfWgU8DnrCFP04afJL3qFS409tfYUdOOwWVUJ1ADRJHLivQrOPLJe0gySHU877kFK5fvy2f6F5Lcs8WkwE_NVESg6ukCnOMlv_LRo2GexFKatPspZu-G0rsK8pa22X9Mr8d3-ihZjJGXKiKdoQ95oWZGSnL1ifQMOB68OK2S3lnQ2XhRjKZh18Yz9gqG1gihLfkgqUY_tXqCnSdytK3oKrV48NQiXHspUgXM-rDoiYHgtBQocvdgK0EYf5kVA5SbThe6HmYEz_tPz-h840-NQQD-7jxUgi8cv3ehD5rm3wlblL0tQqExvnfagQMZQ5UKg31C0SQlbXeVPkq9LEmkhW2QzWTkFz9u2d6fOZrlBzN23r1JFMUAqfJZPy1S57LEcxp8I3ku5_JNqYdm7zpzOgGvda4amGepu_bOzAakHcz_KCWgG9Ag-b2tHn5801azhpB7Xgl2yGVLQGyk4gMcYuEWmWeZ9pQxNMZ3k7HnMUrGHi7UhEl7hvk2iB4Klb4b5epD3d-iywqDlmHKcbwOvQkIE39MQiELx10psYY-Bn8waJzNnrHGv8V8jPxOx9LljhWMzRSDXVDgrezRxoZPsmPsEMGUmgw7gOVmEVO8LfhXOkrXDZYXjaA7ZmbzstetL0aJShkgqUxj06qkmsxJt8m-TOH-f3DIhvgkN-ba2c9LM8OLVmzVMycjlzV9DBJ_Dn9xHKpx21l3iX-smBA576FiowMBTSTDnrHwTSWXxWjkfK0hhlIQrUpjUhV_SlNr5VEAUr5m9pMxGA7og=w1200" alt="Casa com molduras EPS externas" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(3)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMCU1rOGLpOsUX2ayuIvgDddQTDNofo-WBzwWWKn_Tslt8Rm3MuEUZD9-3eEscnRlDu9SMgw6U0BY1hBBNXnp7CSuwTqdUV9t2SIz8bpTyf9oTaEubZyt8bBFX_XrASFXAvZgyYBp80fbU_vLmHRmf_HAhIBkcOs17hxx0uROJwzbuVWwjRbKXdV5iWnP2Qy1x5CSKJp8doyVrj4ac3I4nIvjzhjATsmKmxAzaYr9oi6gwsCR1MTzwyupC_HEuIIgTTBKBM_TQhVWgX4MIIvmWrEkBQi-iBT4RyP5yYCFUwG5h1Mmtzo4KBQmsx1K-jDe_C7XPfnaqrgJOTuT8EiNfjJYLO1_4az8cgdd1olUziQ47vrp3Wc3HUg6j2VqTuVrEf2Uz-fQyWl19MEp69ycj7FiR09DY9_MHvaSniAKuSWMeWN1vqTK_7NNm378uoLiF_GQdnKl2dsLIRrZHnF61XPx_sevAf6ZtNxpfI0S7ZL03t60E4X5QPKFmADuHCU8ofjPCsfVt2qo66J8FX4rSz8QYNRP6Lm6Lekodm3XryioMq24t6FNq-5p-EWkN3DER7C9WGVQWWiNLVBT6gJazcbp4Ks1pTVCy5RoIxxkev0YuEcSlrIJUjIHw56mjuln63a5TLKGFeoFkLmg1glVq3S-vTAacKsljrhuAB1vNzFBSEojPZMHzCCZ4DXpnusplNJ-BMtIZES8lJK0xeKidA3a2Wy26jeBER3ElHklw1qUbmUDmjTbOT0rJoNTWA2mYyVY5R5VNChEW-b9N4bGOj1ZChKxU1a-Z2ifmwQmFBtii-mOaQLiK_SAngJe9WqsQLTrexaexc7VEOseZaomCM8s4e_t242FqZ54wVU70ESstwnOiY4UvyFkz195f2RCzP3yjVtv49d2llaVdVB3aRtkhbcr4blKHIyZXCYabV2X4JsyUK09dPes-0jbI4FdPTp8j6pVcJxBek6ihTV67C_RrR3X9IAxNYkLnp_AwTnUne4N13IR3Lx9TpxffHAjvxEBuugfbE5p5x7rGNDQ=w1200" alt="Fachada residencial EPS" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(4)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNPuUFVkgzPDSXsIgcktMurposNed_Z2vrIMsziR62nsiFA1TRezZt8k5J-MeXvcr58nLE9mCIGI_gX-4lsYtH_G1AyzVUwZGsy6ncu8qZu3GlnMyGtyOjzIyyN96p9UCX1bXUp9ypNolB5RNAG9LpWoUh15j5j1DjVH1yFS_86x9qLM_Y3xne-FHkLED-ZxsdyItczBH1ZPb4IRLxgWPk2PiwqHmGrT7lzTCy2MnWQJxL2gDT7-9J1vfaIUsXvoLzJObtvos9Yp4ItRsmQHQqtOD_jsobZhaE2nilIR51pCFRW7GFV_laO-Fk-26qmSXSejIf1n2bwHS1zGRcINROJPN1OnzK8zuAp8FgCvF4HpUG0ZwvA1kFdqiWwUZjWtRr1ZQRrH82c_j7uz4pTXQLafq0y9Qj369oVWAZUUh-NlllHYeGdhS9GWw1u1hNi_1PQOoLjC7p_7aTRGFdB5MGSUESEftnY296tNjfeV9fWaxt25iy5yg22cJFb1x9Y_keNPHHE5EwMomPjaRln9hiEtVO9PnGRvD9GLQGZ5NtmNdi5QwBFb9139niU-ebfaruGv9SL5sruCQOPkFT6AWWnQhLOYQBzsubvzfSbCvuWYvrwAlmOObukwnDw9jOp8Djo-emSgyFcP94nJKIJVQpwoGiYWyuhXQYtsI6TfLd1wQfP0NwBKlz_OLkflkKLHY_BpaUZQCEYr7rRxJJXIBSqiPyMfWQP-a-4tMXTkujFnHfNCEJCH1CaItR8Co7s6m6QE9_-kI0SMya_6xbDGUDXem4D0WGDt_xCS0FVkgKujXtC5jYigdmTPBE2CD4EGnn4QiSw9mR59GmYWhI81iV_8uyegy9KBtHdclbPq1owF9Hap4xTkB2UEgfKDVBbEQAAnrHmm-2kYFpVDBoKuYX3Dwf1knvMi3SgJmDOR-G8-5TT4eWJjx2HxPkazvJB5hH4oYv7aPpIBfJ_VwDl1_1M5mQTjogCJvHgTj3vXCMFxjP-JjAomLbYv1HAKbKkgDnCBj_b9QByhf3j2_090Q=w1200" alt="Molduras e pilares EPS" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(5)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNq-GLbCKK_z6tWlcrsMKplje3MbBx7Je0lQK0GxaKnVKUNvk73h-rD6Iq3kMUF7njmgRlZxC09aHOIvfgNrRcLFnOJg7cMB_5ME1mxtDP1iXFWVB5Agc0BOLTp_Hz5Ibx8xP_VTLohJbRJT1T63uAaf7RobzoPs1B18BA2DsC-XnaV6De394bAFzHVV1Rlfnksa9YdJuMFWTREFsB9845qezmstejoAjcrMjeR3zqqwE7rcyY9gKF1DvjWklxbpyublkNFmJJQXv7z_j59zHa8uxm3jBUiFcAv7IuT4vHgrBQEef0r1fUogEBicpwv5XBWx_0EPrHVfiPXl1al3YhS6XhojrMJfWacrRSrqdge_vlkbSMnQ8KqH9Dzgc_jcFG5cOYHfvFENw5IHDpAnsv7vrxQ-CvNYfV03_6Ohk4UjxGlU_du_uXJpqC_B-iP3GTHSelbTvxJZuK1IcKs_W7Gr3wB2lINiw1D3ZDLu4CwEzrNz5ch-lj6jv_CS5SiO6NNO_NPlwnYuTCB4kd7KzOFVQDT0hh-eLVQWxAPxBgBLEEFtukURM5-fqkqpiwEiqw7EiX4SKD72Rj9LDnnJL9zWcZameoqm4nkTCrU14L2P7HBuzb48gYoNmqft_Qi7DiEF8UVS5XHAQAqQhuYZFnUpugs36DCzKiPUkxXZnsUXy5OVNhSNwy6mmW6sZMwQhTb3j1SLZg-kM3_VV3OUGgDTtOFlsDl0CPPjGJC4gsAIB-5m-pjeemHNyMVb9ppQnZBAZA23Y81ZmVXddaA-YThhx1YNa_agkDQx0P77L2XHIg96QIAwssOOYF_986PWirL3dTUsZZFjQiiOYSjJrzU5K1PoQXRzJhHVpmLWuPa17kI_8cTkwwuavYLBpBonppTAdgXkv1e15ssL9g9ometJXe3vUarkt5tvjwqzl40qeYjjNRKDsHbnkE6Sw4PXbW6hniK1dpSYCRqPQAxT-KV3n4WIsen4A9WDGVZaVjHJ_SiFz58C4Mj044NB_GvH0Lrvur2oyPxV_OvHcpuQg=w1200" alt="Fachada residencial com moldura" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(6)"><img src="https://lh3.googleusercontent.com/pw/AP1GczP-KJ01ubgrWzZ5ct1orWa2aehSAhvkzftmcicRxzCnTjcQlJgXFuLDMtprvJT2zVnOa46wSHzt34pRG0MkEU_2z2b6LKUs394rRn2Zz9pZ-1YGGy01z5Cw0QpNGGqjgE_Is7KgXm_IN8V5wvmytaM1gTr6q2CeFXBwhBY8plU5KJFykora7akIs25jD1TseGHKcuF3_zjQgGrWnIMrAftm2l8BgwPEWeAqGXxacHLdhYmkVqIGeWqTrQeF1DyMbRhRxLx2SJArmy_5DHU6C8I1cVp_RJ2kp5cRN24rJloENW7ebacxSewTleQkBVtoytc_0-45q0Bd_QV5RduXsabgrGIuU-_ZFAZHZao-uJG-4vG1lSU9dDeBk3f8vNxbIhZOebEVIM-gAq3Prxad8IOXAST45PMcWa2Q4UNXdenvJPmqdkaSjS3do2tSJAaB1uZ6todoXz9S1Xc4pC276QstnvJedThnGTscLaWLFfofjiyd-YMpkJy7J8FqqV_U0eSVav3f-ScXOqF-r6orRKkco65ZtpeTcpBqco6cVxKs03GN-ToJNx7NsQrN7em0S4KUS7cNg14OHWXesCNl7NTZtCcDFMNybWohdlhidHvENgUlUPaIBaNzRxY3_y0K1xqSb1y8vIB-psbITwm1Qppzar9r6eNaPJK7sMf6lSCBTOoGz_OcsfomaV22S5xAqzuxoN7UQrELa_1GAf01n_lBkLajWBoD26hzccCOK5dH1tkpEJ_R6w4h377oIUgKG0e6wuRq7zqsO3Hw1pJZi5VxFSIvw7EgxBr1ALEOJ3pXbMTUxRooYBcvN2s8-W6jV4tJaA1iJw-7_7JoXHTtKAs3unVmHb0FhtHBT-aXR8JwilFqM_QVD1yhxTvlgtsgTYYXl-Qx2NSXYxDrSomPMr6EiKDMbxeSTR63iPHq9VR0tb2PvavsmVZVB95MMCpk8x7B9tAyCcQnHQNW6wZOr_-oTJWyh8byMGcDu9xW9GDNwWMlpTC3NGG_yZDAx40QgL0VRGulMRUHAryS1g1pAQ=w1200" alt="Pilares e molduras EPS" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(7)"><img src="https://lh3.googleusercontent.com/pw/AP1GczOfnNOlIk5IrP2jaN0KQz7EROVX56hYPwvBh5vaHIWytp25_jcOmsUA2N0FqghPBxAF2Y1hJPwk5wJjZmFcnd1UTty-OpGN5A7QGqvCca3Boqgxcjn-QyR4spoV-1Wl5y4Qrj7U86Kz1dhVb0gQpgegmxFgPG0gk69VcxH89rytvXUWZn8BweSI-N84kyob2WrzCDttMQckuby9ryVXbibHfuwoj1op5KYYTdXojcHxXCCe4S6KGUCzYUmea1aK8EWBVd4eGu4egZbw8-0EwtXvSgRFh-nrmCK_QTlkaHlqeLC0JnaDsI4Y4QCNHRx6-r2K0Sff1sZmFmUnXu97kyfvktFhq-LcGLWS4yKJBZUhNeQtGP190WfzyyCtzBUuHlvD0BlUDC5GgJcPhQAjo1zkZM0Brj_nXkAp_PRj49d-KKunn4-m3GHA2lBXMGS8RMMmQ4-b3YoOhkPiz4eTDzyNNQtREsGSmoQIaJ5sMZn7PqPOBQPwuGNz9n0bU3TR8ED5P-inWT54RG69yv6XrS78cs8M2O-tbm8kxrOkBr18QwZLQLohCIvkqUvBCyVDE_0uwS-bSH4w73F6YRZ7bgdMKFd-9a6zFnHqTqja_xmomIOxIEdXzJ-zLxepU0U8KIabc1jy9k7G5_YL6tCF9vqerEzr66kAzmYirTyvoWERSz5cvPON966VHYkYcfnjjBBXiRkjxeE-pfJg_bBmt_kiAHiDGkS03O5DpQ8Vu1TBXhfWu8h2mhNYh1NHAre7RQVg9VzdkXY_8_3o50DHkmLkDJ0kXaETAqkTaDvo53PUiNRBQIjWdfetc52QDJEgcqUJlZ1gdpwPx40MKiiLSIxxhbozet_4TkV6UwjVW9jlKxlE_E0a0M2klox_yFl87sccft-IkAayA_BVZsdALZsgUrj8IlNKd0pR-qAVh_GlqNRpVzq9WRkOnlG_Pe_PRG3mld0q0ywISS-Vd7VF63eubYxgbj8DB80wGEwyDv7J3IWnyeM47ruPy-VIFBe0Ca9H4EMWDzoWoP5Kr9c2Dg=w1200" alt="Construção com placas EPS" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(8)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMKCt0Xuip-0vzLILc0T0rk8uARy5XVeKzNUgAulmNTe65qKfUv-c9f-Z5VQmwxdMmEhurgwSQKV5q0OsS2ornM8WHx1_Q9MCIYoaMguZINJ_PUTceWKES03-qDT1G651NzihtLwe7CXATbbC2J9s2hIecT8yQ9uLVRJlXck8xIquLcS8o3a7jIh_54fzxd1pv1ew-C5HL0qWQV9-UXKsi_ZqvJbrI5pNO3JJ74YIZyvIMa0SMD_6vOFAsS_B---Ab-D-tUCDb3Spfk1CHVfFgr0WpW1SJaTQRZ0NtZF-VqXsGaZTeg5IU9YKJw14YFmRR4Rlh3UEi0n8j4LNzUs8pbE2nhNXxMy0NNjzz-SrW6JF4tnNJD3SBZ5S4IuMSaQ09vbQfCw7RVybkyCOYrMxdwVK01V2gM7BRe3b4WItKc61d_Se-5l1ENzXluqa5EuPclP0Dz4T6LVjpOTnuDX1Os3K-iVER6tuluVRKNne3ZL7z5cGhFSspC56VYOULMM4lIoSsoyIqHvn_CJYGU4ydB-lqfiOrKpggXd0F7iNcZkDKmm_QEKuokGg_BqnYHMtDrGrZJwlMsfyX9Tq5xH5MhQsUNwBf95bEpw7lYStcdaRDzNnk6W1JcB5jQBsWS9g-cLGAxhODwSfP8UIVGAOL8N-mDYdHJM8atoH0fPONx_h0lLI-DMyU8Ocuj2N2FgslmGwT0ud3o_1oUjoewzr-94o_rvZ8ql3m7uaYY2lDstnhhtI6HqUMOvajqMfahV2Wqug1qk1EBtUqPxl5MmS2CTT1ErQYmnehhmPfv29q0UZBEQFusWWqXcHBFNuQP2DcgjpkpffjrMHMeV0qPoTu9WSE6s46dK4hooEowqlQBt52nly-MoKND5THGSsDPcOUzJNv5QHtBeQRf9h3bB_VKO4nvIjfow5uWRYo26yzG2a7mB4TVOl8VdkwZYvyz4gNujpPMHlkIuTBW25djU9YLIvLUMbPesLBWp3j8KAx1NK8aIZ19qG56i9r1cSmzQ7VwDXJzw-5x-iwMsiOBLg=w1200" alt="Parede EPS instalada" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(9)"><img src="https://lh3.googleusercontent.com/pw/AP1GczP53XZY4L8ktxEFm9Z19GFhsgA0Xz-d1qu8GbtSF3tMaWeBAg0rgb3-MEtMUqu1e9rk31mlMSWso0u_0yVb6sX8awmSwIgddfuXtnPWuKTst60k1_JA6jHdNa4PXduMvs6xq9y_QHt3hvDknMy8SESX6qfhip9DHK_ye-ruwM2O3CRTLCOzDpG0Frlgf9uM7p7-ZdsjCvuoub2X1-8ICoDNhlB_BpDGWI2Fzq_BNqWabHsI6bxZZc_b6kG_qmMF1FU_wksO0IxC3O9dAcYhEFke53DgBbo8JakiU5gRScnWNen7CJ46outkA7laDEVzlWO_H79PhQXWHdksE__RB0sAHz_H8SWRyadoeO3ZqpvqcVn5oF3SVeKCnbvZLPOGSYF6uESqKfks8mW_8kq_sbqDYS_3zP47P9WpRdrok7B9KW0xBgo69lmcNqfH9jTxZEjs8iud8sXwgSy5chjEKcgB7IaaOApIzYTTpjeIprP-zpCxuNTfVybyEGIHNPL-hgFEj3i20VHdZXNOWUGKWiA2h2R_Uq_qXjib3SgwhfauzQA6YPOZbPWpN3WWIq03QlHQTSKHIScLOiouRWjkZYaS1aQ4xyHcrLekrlQDvi6haQcenQ3Gwd30mn4TZarJrAzazhHWMLi4t7kUggIbKtRFphzcdRXZoaecaIb8uooS_v6_L4c-TA9xZsqxLyfmJT55UmQ3dxzXRenn9etjsTN88GlsflipeUB6E7lPw4AJpHbDnBaT--IdPcV_p5uHMgxhRSwwZy8q_Z4nsQa960SQSN3_uDVqeNZFAoL9vNn0j7QGFLsgRKSt39MOp0_YGzFC6d_yy3413oo3cQ8ZYgWAkldxN12QiObilVeZYc-11LwF4quecr4kNq4OP5zB5mBx6LoDgZCNdqTtg5aoF7dvsHO2Z0Em5luHSW-SYgFo-S74q32kJhQEJ5D1ywmqrn0c3yefLLf2kFRyDPtFzX_ga35iKyywv9ffCBdwL4fcXsjjtirXzDUYVFb_m25fUuQ1n5JjOgKO3LNF-mPDjw=w1200" alt="Obra em EPS estrutural" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(10)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNfCTTxDZp_IYzd4AyGHw36UfztsvWPHS_dCJHnqhm0KexgacwXNAK7ADQHYGGaszMf0mQZokYDcPjv_4fcqn-2mDkP_YmdV_Vh1WLroPk5GA_nT_0zFH3JvCTR4HyS3QIzflzwh05Vu2qis3F3vEBAZiW1BPyU4N82SMtq0mTfh5TYcJh4d790mhlbqyRcPkGFuBJE1AaLYTPRwOhy4yN2SVqIk6Q1YASa0Ekuqi6h9cCSbvrkfRbzG0qtqAjiJz5Jf4NW3tnB89bx1sMc-oWoGyyl7XgnkEo_TNk3AdV2_IrKq65K-z0QsfXGH67nQyTQjD-PFbemk7j8PY0d65aO4eTyfEWHU3eMtjoo68LbVUtLg8buUpIMusCh2QDbkvFx8jxseTAgDVC50wi24woUmXTLC8LzAgnSJWzEup9b7zvkWayEUf-adS-2-Hc6v6rQ3zAdXOTtMKnKenPuCvb17ThRV7W5aB4OZKuXlHbhP3XBWccIXqYdkKA_gJy-gjbsC5H646TfRyK0_blZNrm9zzkt6k4QgfZmBNQEUHXOjpm1q2fDIGgFTx4mN8D68nokGFTs1SDH75MYZOT8A-noX9WMjlFISfBtxGC1_oBmpOCVs99D2x62VpqzAvYRhaOuBwQg9OJCVhDhVWiYnm7CFPesNcmy7i2tXl29agOUZS9YERefLuDrE1-Q4T2F3Noa-6Sdke577op6L92bP6CizXHYN15Ls-sPGxep6f0dTDVFzE_3vF1WG-_MoGB7HwRur82oDG2Oy-hhhb5BweJ26BLlFT_2_QMG7geb4XHFI5pNtnfrdcNLkI3CK857qDCMy7ZHr4igBGFoDQvAAYsEUjhj--L2pSE-EmJtG7uRjNty0rdd0H1ZauGpRBqCBKXcj3T3OfLIeP5KVGV6cWwql-7n7M1DG_GrE1fDbmpUKd_uv6dB0VCfzpwSecGpNfU5UQ7fOc3h6ZQLV7AMmJGvyW4rprjm1pJJqB-MTStP6ol3sUX5d0dVN_QUlDZbMLbHZ82puoBdDwayDdUiBw=w1200" alt="Construção com placas EPS estrutural" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLb(11)"><img src="https://lh3.googleusercontent.com/pw/AP1GczPmJ93etrXmH1xNbnkwRJmxyvC5nowFb9RrlVL0XafvSzGvYQ5abaeS094O2wzPx9yQ6RXfNvsOUK2iyzAzNBetq9RMbO38CPGRmMkwg0R6NuUEgq85pK-cOLIvYyukGGJYpq7nWYqh8cDozgpoER_FSE2BpBTVb5VZPT3A-6kiPE0Ws-3a-TKGZh-qDPqe4-FrdsIoAwGZUgdrMSiBG20o-mDBbG49XlApEagyWLwq85juflFto2ibdEfNDu6rcPB2bd9t63kBKVOnjJruFY22f3r6WwLBgj1ffxJj8HV1CRe93brzeuNw498iAqbW8jT0GW5o_Xylv7MgPVZHqOR9j5Tvq-rSZh7J2XNvUuQxwGXOaUFV-b-pJeqTfu4p7haeO7tcoV4POFqkgXdlyfbiZNcLL-Jo4MiXEtYDibzMdMxy4ntvywgGkkAyis-_A4FDaF7fjWt-4cFD6SqCkMiwm-pDqMJ65oiuPrzgaW4QwNkkFhXMRR5YbC112jUjo4ezKSENbRJokuSMau3nAnBvKGZ_RXr0H7fye5IV3j3_TQWSbO5k7QK0gHllE8clOU7-L8hot11sDSwsMuxU6Jo2fWIqXnliHuniyfvLk9V-HzEc1o3uHAkseVMevqBT-p-W3IkV52R678GTk5mS18H_mQC6J307dVgd-1tddwtWvvxQQC0MZFpy1XIidqD02kRKvySX7NSsgbHFzlhCFFWtek19tHh0OvcUiVZscGd7lo9zqKnl84YY10GCCfHYO7djpi8-z9WEEp9CbNL9gYqrdWPinXly6Y2w7FAopCVV6nZHHedyDH51z1LLLZ2rG7bqQP6dzP1jBt9Hd4Vi4gvSJY1r7vVHD7XthJNLjLBy1nGr2xQKjd1wgMtvwcNo6Oj8YgVx-tIagnYcsZQSeLmpisR-qhs15juKrx1V1i5mOxRjA7XB1JKKZh-ZGwcYo26oodvf6GVX2VVzR9ntLqV5zVQBUKi0c8pEROtnmuKJBCmtgvWjl2XZU_faT_8zWhlvfo730cIuwBXj1ABh9g=w1200" alt="Montagem de estrutura EPS" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLb(event)">
+    <button class="lightbox-close" onclick="closeLbBtn()">✕</button>
+    <button class="lightbox-nav lb-prev" onclick="navLb(-1);event.stopPropagation()">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lightbox-nav lb-next" onclick="navLb(1);event.stopPropagation()">›</button>
+  </div>
+  <script>
+    const lbImgs=[
+      "https://lh3.googleusercontent.com/pw/AP1GczNIs2d9LUA_D-L0DyNVhDFXPBZmfVgc1DiPaWfR_yCsKrP7YeFHcj8DJkGGOJO_oXus7AsAgJFRLkV-b_0_t2fnr3hlmOl_IGNHVGbecjvBCMCaXRjIpxmF5dQ5vZE2emFE-QNteK3BpaEADElCXdkgDZXmHTd0M_ugYFN7Lq_oNsdoksR5dyaJbb0vSbaA7ApcqhXw9EQVqKvO8ZcxEG3U5Aqj-zFziO56ENCSvLLmaB6FaKirhyzRETxF0XV5dNTJqtBGODHtzf3xQwf5kdL9uVwoIHaUB5aLOrAKjDRk8RqKO2oL6BcMTvLbUkgQeSmnRK9D4jPymxa-qTnULERzMocJBpJgprPyEdHXLH2YEC4xdjTwNYYg6xgsC2sHmm4h6eUfSmvJLN-XhlCsV0GyfkqeQv3rPj0VwQYMT6t9vtJ3OPYUCK90_nPpDOHjYdfsZEqbGfhInYXu1-M9oyj0duGHpIpRkypAERmGtC12bgH1B2rnqqXJCupwZnuu4HY8_Xdlh-PC7iD0yDI1gUYLmD-dvglTrYDWtJ86d1YKWdKF9ru8mUW23t2Hp10OS5QuFlYcHUZdh2Lc8-a2GQN8asKK9O4e9q8JfIqTrEyiloRtpw76T-mrt_6gA7GbEicg7nZeUB44wNiQewYuDLJjio0kdvTth8Rkl6hA6W1EREl4ErzSEOvqekmeyIeC6tSyJI5K0_A_3uJRWVuiLZPUSoLsez_DLlICz6KnFk7ILeA9t89vg1Klurkmj-TT2huh25y1KkXbGo2rTZQeaIjAOP-9TFkkk1bFz1Ofxd5JWnNMcW6k4bKoAXHnuNZfkmzGgaK9QJUMV4q2Em9qHkQFipRmbIdOGU4biCbY7uU-5Z6EIR9YXiR3Xff4MsrhUkoocryhoMjOp3y4LOv_tMZkxR0N2mdEd5neMJSuTyJbHGTb__KFbzA85Fm2QSQHhii-5kr02s9WY9k-WzhqxOuqfN_H5BdSOCX8dXgjoTie1w_2P3VXBBVTNj7k5zdZR-kyfkOEk3cLim_CNya15w=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczNPdnCswNouhG0Ocka5pRyujhQN_bal7Ypa05Pt2tM1BaMBtB8dSn-2ToFsqOCLFD_5o9UoSuB3XyBtuY9RNsXs-r9UBVLnHdQOEvznNJfVuI2NDE-rCzKArhO1XpnUTBguVzoVvQj1oNvznCmsbQO6EPOzx0_ehD_owfoUbxatGQj7f2hRexiKjKCmG1ENUCZksFn6LPB7z2HUWPFFYJy5T_lAFBU5bwTx_PCUTW07wPUG5wjQNaZO0m1gdZfAS3sAOPyrTKQGDVwnPfUeXUJtQfUXqY8_AHucb06hB6uXvID-vhZm2Bmie3hyRiBQXbzc6p8r7vvEIMTCEL9JGAMI5JNcOcKMnnI3yMyM7xWX5SclMogM1xn9tUxKV2JHa9WPtlJl0FaAzRjLAbuy21nM7xTSZwKEComZO28YfTKfbJny3nch3c6BvOXxpGxWlXpg8qqE39LLe68G1OS6KpEX2t7hkj7zQfDCIVjjv5NTh23pZy3hivVsTlL3-RX2R5U_KewQzYzh2yFxcnh9HoGoZUb6SCjELiFBEfpi0XP6jcy8BQ9nwtSb1G_y1fXqcS3WS7tIZrUFB6K6rZzdl8bevzcdvguwsxYt9e1tabYe13dVf3nzFZKC--Jqe3IarGAASBcR_NV4Z2C4FtviyqraWXocKRhc_RMOeM02kHOh3FgFUgiIR3M7ciaStEwGhTppF3SJRC1lRg4SmR9Beo_JIcYK5i4HJKDE2ApHeG3Gwt-QPeWkhQWAR5_lwrMTRncD6MgYIZllu69wet5C2TbyaUtAo5SnB3Q-VtRd1RPu4sCfqYbJ5J2P2azRDLR-7O4bInjUcJ6UcKNF7VGQ5RhLPJPfrNpDjwLFNYo-rHm9mrAv-J_A81fokeeXjQgUGhz9xA03nKXHWBvo0pysZrJ08Dk65ir52_oQuSOcgOvlVi-8XnrGOdixCmlvsKWnlxVMwTgtSKyy9fikaO9__WFUabSJJSgqaU28rVYO25Lb-sSBDFbSIUBrFOcJTC-6R_XSyPLeN8sZPXAXBIHjrw=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczP8Myk6GW6NnroWBXsBiRZZUaGH--AyNOhwZ6_QxRvfr9sCIOvyXDTlwJ7arNADG3Cmlts7DgJqsKAxFJuyrvb3UsrYSHRsFz9A8K7mp1rVdIEcoDIkLjgeBb1MMtkyYzRHy4Gfh1MfW_rEsnOOaEMXqbsfp8Gyv4SwDgav1_onJC5Fb4lVd5gLyXL5KEe7VPY7rH3lNG6xcIcT870hFMN96W8TIKH1vFsYWB1Xib-KgCP5sFZTfoF68kWLEptWq2wyOxfWgU8DnrCFP04afJL3qFS409tfYUdOOwWVUJ1ADRJHLivQrOPLJe0gySHU877kFK5fvy2f6F5Lcs8WkwE_NVESg6ukCnOMlv_LRo2GexFKatPspZu-G0rsK8pa22X9Mr8d3-ihZjJGXKiKdoQ95oWZGSnL1ifQMOB68OK2S3lnQ2XhRjKZh18Yz9gqG1gihLfkgqUY_tXqCnSdytK3oKrV48NQiXHspUgXM-rDoiYHgtBQocvdgK0EYf5kVA5SbThe6HmYEz_tPz-h840-NQQD-7jxUgi8cv3ehD5rm3wlblL0tQqExvnfagQMZQ5UKg31C0SQlbXeVPkq9LEmkhW2QzWTkFz9u2d6fOZrlBzN23r1JFMUAqfJZPy1S57LEcxp8I3ku5_JNqYdm7zpzOgGvda4amGepu_bOzAakHcz_KCWgG9Ag-b2tHn5801azhpB7Xgl2yGVLQGyk4gMcYuEWmWeZ9pQxNMZ3k7HnMUrGHi7UhEl7hvk2iB4Klb4b5epD3d-iywqDlmHKcbwOvQkIE39MQiELx10psYY-Bn8waJzNnrHGv8V8jPxOx9LljhWMzRSDXVDgrezRxoZPsmPsEMGUmgw7gOVmEVO8LfhXOkrXDZYXjaA7ZmbzstetL0aJShkgqUxj06qkmsxJt8m-TOH-f3DIhvgkN-ba2c9LM8OLVmzVMycjlzV9DBJ_Dn9xHKpx21l3iX-smBA576FiowMBTSTDnrHwTSWXxWjkfK0hhlIQrUpjUhV_SlNr5VEAUr5m9pMxGA7og=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczMCU1rOGLpOsUX2ayuIvgDddQTDNofo-WBzwWWKn_Tslt8Rm3MuEUZD9-3eEscnRlDu9SMgw6U0BY1hBBNXnp7CSuwTqdUV9t2SIz8bpTyf9oTaEubZyt8bBFX_XrASFXAvZgyYBp80fbU_vLmHRmf_HAhIBkcOs17hxx0uROJwzbuVWwjRbKXdV5iWnP2Qy1x5CSKJp8doyVrj4ac3I4nIvjzhjATsmKmxAzaYr9oi6gwsCR1MTzwyupC_HEuIIgTTBKBM_TQhVWgX4MIIvmWrEkBQi-iBT4RyP5yYCFUwG5h1Mmtzo4KBQmsx1K-jDe_C7XPfnaqrgJOTuT8EiNfjJYLO1_4az8cgdd1olUziQ47vrp3Wc3HUg6j2VqTuVrEf2Uz-fQyWl19MEp69ycj7FiR09DY9_MHvaSniAKuSWMeWN1vqTK_7NNm378uoLiF_GQdnKl2dsLIRrZHnF61XPx_sevAf6ZtNxpfI0S7ZL03t60E4X5QPKFmADuHCU8ofjPCsfVt2qo66J8FX4rSz8QYNRP6Lm6Lekodm3XryioMq24t6FNq-5p-EWkN3DER7C9WGVQWWiNLVBT6gJazcbp4Ks1pTVCy5RoIxxkev0YuEcSlrIJUjIHw56mjuln63a5TLKGFeoFkLmg1glVq3S-vTAacKsljrhuAB1vNzFBSEojPZMHzCCZ4DXpnusplNJ-BMtIZES8lJK0xeKidA3a2Wy26jeBER3ElHklw1qUbmUDmjTbOT0rJoNTWA2mYyVY5R5VNChEW-b9N4bGOj1ZChKxU1a-Z2ifmwQmFBtii-mOaQLiK_SAngJe9WqsQLTrexaexc7VEOseZaomCM8s4e_t242FqZ54wVU70ESstwnOiY4UvyFkz195f2RCzP3yjVtv49d2llaVdVB3aRtkhbcr4blKHIyZXCYabV2X4JsyUK09dPes-0jbI4FdPTp8j6pVcJxBek6ihTV67C_RrR3X9IAxNYkLnp_AwTnUne4N13IR3Lx9TpxffHAjvxEBuugfbE5p5x7rGNDQ=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczNPuUFVkgzPDSXsIgcktMurposNed_Z2vrIMsziR62nsiFA1TRezZt8k5J-MeXvcr58nLE9mCIGI_gX-4lsYtH_G1AyzVUwZGsy6ncu8qZu3GlnMyGtyOjzIyyN96p9UCX1bXUp9ypNolB5RNAG9LpWoUh15j5j1DjVH1yFS_86x9qLM_Y3xne-FHkLED-ZxsdyItczBH1ZPb4IRLxgWPk2PiwqHmGrT7lzTCy2MnWQJxL2gDT7-9J1vfaIUsXvoLzJObtvos9Yp4ItRsmQHQqtOD_jsobZhaE2nilIR51pCFRW7GFV_laO-Fk-26qmSXSejIf1n2bwHS1zGRcINROJPN1OnzK8zuAp8FgCvF4HpUG0ZwvA1kFdqiWwUZjWtRr1ZQRrH82c_j7uz4pTXQLafq0y9Qj369oVWAZUUh-NlllHYeGdhS9GWw1u1hNi_1PQOoLjC7p_7aTRGFdB5MGSUESEftnY296tNjfeV9fWaxt25iy5yg22cJFb1x9Y_keNPHHE5EwMomPjaRln9hiEtVO9PnGRvD9GLQGZ5NtmNdi5QwBFb9139niU-ebfaruGv9SL5sruCQOPkFT6AWWnQhLOYQBzsubvzfSbCvuWYvrwAlmOObukwnDw9jOp8Djo-emSgyFcP94nJKIJVQpwoGiYWyuhXQYtsI6TfLd1wQfP0NwBKlz_OLkflkKLHY_BpaUZQCEYr7rRxJJXIBSqiPyMfWQP-a-4tMXTkujFnHfNCEJCH1CaItR8Co7s6m6QE9_-kI0SMya_6xbDGUDXem4D0WGDt_xCS0FVkgKujXtC5jYigdmTPBE2CD4EGnn4QiSw9mR59GmYWhI81iV_8uyegy9KBtHdclbPq1owF9Hap4xTkB2UEgfKDVBbEQAAnrHmm-2kYFpVDBoKuYX3Dwf1knvMi3SgJmDOR-G8-5TT4eWJjx2HxPkazvJB5hH4oYv7aPpIBfJ_VwDl1_1M5mQTjogCJvHgTj3vXCMFxjP-JjAomLbYv1HAKbKkgDnCBj_b9QByhf3j2_090Q=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczNq-GLbCKK_z6tWlcrsMKplje3MbBx7Je0lQK0GxaKnVKUNvk73h-rD6Iq3kMUF7njmgRlZxC09aHOIvfgNrRcLFnOJg7cMB_5ME1mxtDP1iXFWVB5Agc0BOLTp_Hz5Ibx8xP_VTLohJbRJT1T63uAaf7RobzoPs1B18BA2DsC-XnaV6De394bAFzHVV1Rlfnksa9YdJuMFWTREFsB9845qezmstejoAjcrMjeR3zqqwE7rcyY9gKF1DvjWklxbpyublkNFmJJQXv7z_j59zHa8uxm3jBUiFcAv7IuT4vHgrBQEef0r1fUogEBicpwv5XBWx_0EPrHVfiPXl1al3YhS6XhojrMJfWacrRSrqdge_vlkbSMnQ8KqH9Dzgc_jcFG5cOYHfvFENw5IHDpAnsv7vrxQ-CvNYfV03_6Ohk4UjxGlU_du_uXJpqC_B-iP3GTHSelbTvxJZuK1IcKs_W7Gr3wB2lINiw1D3ZDLu4CwEzrNz5ch-lj6jv_CS5SiO6NNO_NPlwnYuTCB4kd7KzOFVQDT0hh-eLVQWxAPxBgBLEEFtukURM5-fqkqpiwEiqw7EiX4SKD72Rj9LDnnJL9zWcZameoqm4nkTCrU14L2P7HBuzb48gYoNmqft_Qi7DiEF8UVS5XHAQAqQhuYZFnUpugs36DCzKiPUkxXZnsUXy5OVNhSNwy6mmW6sZMwQhTb3j1SLZg-kM3_VV3OUGgDTtOFlsDl0CPPjGJC4gsAIB-5m-pjeemHNyMVb9ppQnZBAZA23Y81ZmVXddaA-YThhx1YNa_agkDQx0P77L2XHIg96QIAwssOOYF_986PWirL3dTUsZZFjQiiOYSjJrzU5K1PoQXRzJhHVpmLWuPa17kI_8cTkwwuavYLBpBonppTAdgXkv1e15ssL9g9ometJXe3vUarkt5tvjwqzl40qeYjjNRKDsHbnkE6Sw4PXbW6hniK1dpSYCRqPQAxT-KV3n4WIsen4A9WDGVZaVjHJ_SiFz58C4Mj044NB_GvH0Lrvur2oyPxV_OvHcpuQg=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczP-KJ01ubgrWzZ5ct1orWa2aehSAhvkzftmcicRxzCnTjcQlJgXFuLDMtprvJT2zVnOa46wSHzt34pRG0MkEU_2z2b6LKUs394rRn2Zz9pZ-1YGGy01z5Cw0QpNGGqjgE_Is7KgXm_IN8V5wvmytaM1gTr6q2CeFXBwhBY8plU5KJFykora7akIs25jD1TseGHKcuF3_zjQgGrWnIMrAftm2l8BgwPEWeAqGXxacHLdhYmkVqIGeWqTrQeF1DyMbRhRxLx2SJArmy_5DHU6C8I1cVp_RJ2kp5cRN24rJloENW7ebacxSewTleQkBVtoytc_0-45q0Bd_QV5RduXsabgrGIuU-_ZFAZHZao-uJG-4vG1lSU9dDeBk3f8vNxbIhZOebEVIM-gAq3Prxad8IOXAST45PMcWa2Q4UNXdenvJPmqdkaSjS3do2tSJAaB1uZ6todoXz9S1Xc4pC276QstnvJedThnGTscLaWLFfofjiyd-YMpkJy7J8FqqV_U0eSVav3f-ScXOqF-r6orRKkco65ZtpeTcpBqco6cVxKs03GN-ToJNx7NsQrN7em0S4KUS7cNg14OHWXesCNl7NTZtCcDFMNybWohdlhidHvENgUlUPaIBaNzRxY3_y0K1xqSb1y8vIB-psbITwm1Qppzar9r6eNaPJK7sMf6lSCBTOoGz_OcsfomaV22S5xAqzuxoN7UQrELa_1GAf01n_lBkLajWBoD26hzccCOK5dH1tkpEJ_R6w4h377oIUgKG0e6wuRq7zqsO3Hw1pJZi5VxFSIvw7EgxBr1ALEOJ3pXbMTUxRooYBcvN2s8-W6jV4tJaA1iJw-7_7JoXHTtKAs3unVmHb0FhtHBT-aXR8JwilFqM_QVD1yhxTvlgtsgTYYXl-Qx2NSXYxDrSomPMr6EiKDMbxeSTR63iPHq9VR0tb2PvavsmVZVB95MMCpk8x7B9tAyCcQnHQNW6wZOr_-oTJWyh8byMGcDu9xW9GDNwWMlpTC3NGG_yZDAx40QgL0VRGulMRUHAryS1g1pAQ=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczOfnNOlIk5IrP2jaN0KQz7EROVX56hYPwvBh5vaHIWytp25_jcOmsUA2N0FqghPBxAF2Y1hJPwk5wJjZmFcnd1UTty-OpGN5A7QGqvCca3Boqgxcjn-QyR4spoV-1Wl5y4Qrj7U86Kz1dhVb0gQpgegmxFgPG0gk69VcxH89rytvXUWZn8BweSI-N84kyob2WrzCDttMQckuby9ryVXbibHfuwoj1op5KYYTdXojcHxXCCe4S6KGUCzYUmea1aK8EWBVd4eGu4egZbw8-0EwtXvSgRFh-nrmCK_QTlkaHlqeLC0JnaDsI4Y4QCNHRx6-r2K0Sff1sZmFmUnXu97kyfvktFhq-LcGLWS4yKJBZUhNeQtGP190WfzyyCtzBUuHlvD0BlUDC5GgJcPhQAjo1zkZM0Brj_nXkAp_PRj49d-KKunn4-m3GHA2lBXMGS8RMMmQ4-b3YoOhkPiz4eTDzyNNQtREsGSmoQIaJ5sMZn7PqPOBQPwuGNz9n0bU3TR8ED5P-inWT54RG69yv6XrS78cs8M2O-tbm8kxrOkBr18QwZLQLohCIvkqUvBCyVDE_0uwS-bSH4w73F6YRZ7bgdMKFd-9a6zFnHqTqja_xmomIOxIEdXzJ-zLxepU0U8KIabc1jy9k7G5_YL6tCF9vqerEzr66kAzmYirTyvoWERSz5cvPON966VHYkYcfnjjBBXiRkjxeE-pfJg_bBmt_kiAHiDGkS03O5DpQ8Vu1TBXhfWu8h2mhNYh1NHAre7RQVg9VzdkXY_8_3o50DHkmLkDJ0kXaETAqkTaDvo53PUiNRBQIjWdfetc52QDJEgcqUJlZ1gdpwPx40MKiiLSIxxhbozet_4TkV6UwjVW9jlKxlE_E0a0M2klox_yFl87sccft-IkAayA_BVZsdALZsgUrj8IlNKd0pR-qAVh_GlqNRpVzq9WRkOnlG_Pe_PRG3mld0q0ywISS-Vd7VF63eubYxgbj8DB80wGEwyDv7J3IWnyeM47ruPy-VIFBe0Ca9H4EMWDzoWoP5Kr9c2Dg=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczMKCt0Xuip-0vzLILc0T0rk8uARy5XVeKzNUgAulmNTe65qKfUv-c9f-Z5VQmwxdMmEhurgwSQKV5q0OsS2ornM8WHx1_Q9MCIYoaMguZINJ_PUTceWKES03-qDT1G651NzihtLwe7CXATbbC2J9s2hIecT8yQ9uLVRJlXck8xIquLcS8o3a7jIh_54fzxd1pv1ew-C5HL0qWQV9-UXKsi_ZqvJbrI5pNO3JJ74YIZyvIMa0SMD_6vOFAsS_B---Ab-D-tUCDb3Spfk1CHVfFgr0WpW1SJaTQRZ0NtZF-VqXsGaZTeg5IU9YKJw14YFmRR4Rlh3UEi0n8j4LNzUs8pbE2nhNXxMy0NNjzz-SrW6JF4tnNJD3SBZ5S4IuMSaQ09vbQfCw7RVybkyCOYrMxdwVK01V2gM7BRe3b4WItKc61d_Se-5l1ENzXluqa5EuPclP0Dz4T6LVjpOTnuDX1Os3K-iVER6tuluVRKNne3ZL7z5cGhFSspC56VYOULMM4lIoSsoyIqHvn_CJYGU4ydB-lqfiOrKpggXd0F7iNcZkDKmm_QEKuokGg_BqnYHMtDrGrZJwlMsfyX9Tq5xH5MhQsUNwBf95bEpw7lYStcdaRDzNnk6W1JcB5jQBsWS9g-cLGAxhODwSfP8UIVGAOL8N-mDYdHJM8atoH0fPONx_h0lLI-DMyU8Ocuj2N2FgslmGwT0ud3o_1oUjoewzr-94o_rvZ8ql3m7uaYY2lDstnhhtI6HqUMOvajqMfahV2Wqug1qk1EBtUqPxl5MmS2CTT1ErQYmnehhmPfv29q0UZBEQFusWWqXcHBFNuQP2DcgjpkpffjrMHMeV0qPoTu9WSE6s46dK4hooEowqlQBt52nly-MoKND5THGSsDPcOUzJNv5QHtBeQRf9h3bB_VKO4nvIjfow5uWRYo26yzG2a7mB4TVOl8VdkwZYvyz4gNujpPMHlkIuTBW25djU9YLIvLUMbPesLBWp3j8KAx1NK8aIZ19qG56i9r1cSmzQ7VwDXJzw-5x-iwMsiOBLg=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczP53XZY4L8ktxEFm9Z19GFhsgA0Xz-d1qu8GbtSF3tMaWeBAg0rgb3-MEtMUqu1e9rk31mlMSWso0u_0yVb6sX8awmSwIgddfuXtnPWuKTst60k1_JA6jHdNa4PXduMvs6xq9y_QHt3hvDknMy8SESX6qfhip9DHK_ye-ruwM2O3CRTLCOzDpG0Frlgf9uM7p7-ZdsjCvuoub2X1-8ICoDNhlB_BpDGWI2Fzq_BNqWabHsI6bxZZc_b6kG_qmMF1FU_wksO0IxC3O9dAcYhEFke53DgBbo8JakiU5gRScnWNen7CJ46outkA7laDEVzlWO_H79PhQXWHdksE__RB0sAHz_H8SWRyadoeO3ZqpvqcVn5oF3SVeKCnbvZLPOGSYF6uESqKfks8mW_8kq_sbqDYS_3zP47P9WpRdrok7B9KW0xBgo69lmcNqfH9jTxZEjs8iud8sXwgSy5chjEKcgB7IaaOApIzYTTpjeIprP-zpCxuNTfVybyEGIHNPL-hgFEj3i20VHdZXNOWUGKWiA2h2R_Uq_qXjib3SgwhfauzQA6YPOZbPWpN3WWIq03QlHQTSKHIScLOiouRWjkZYaS1aQ4xyHcrLekrlQDvi6haQcenQ3Gwd30mn4TZarJrAzazhHWMLi4t7kUggIbKtRFphzcdRXZoaecaIb8uooS_v6_L4c-TA9xZsqxLyfmJT55UmQ3dxzXRenn9etjsTN88GlsflipeUB6E7lPw4AJpHbDnBaT--IdPcV_p5uHMgxhRSwwZy8q_Z4nsQa960SQSN3_uDVqeNZFAoL9vNn0j7QGFLsgRKSt39MOp0_YGzFC6d_yy3413oo3cQ8ZYgWAkldxN12QiObilVeZYc-11LwF4quecr4kNq4OP5zB5mBx6LoDgZCNdqTtg5aoF7dvsHO2Z0Em5luHSW-SYgFo-S74q32kJhQEJ5D1ywmqrn0c3yefLLf2kFRyDPtFzX_ga35iKyywv9ffCBdwL4fcXsjjtirXzDUYVFb_m25fUuQ1n5JjOgKO3LNF-mPDjw=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczNfCTTxDZp_IYzd4AyGHw36UfztsvWPHS_dCJHnqhm0KexgacwXNAK7ADQHYGGaszMf0mQZokYDcPjv_4fcqn-2mDkP_YmdV_Vh1WLroPk5GA_nT_0zFH3JvCTR4HyS3QIzflzwh05Vu2qis3F3vEBAZiW1BPyU4N82SMtq0mTfh5TYcJh4d790mhlbqyRcPkGFuBJE1AaLYTPRwOhy4yN2SVqIk6Q1YASa0Ekuqi6h9cCSbvrkfRbzG0qtqAjiJz5Jf4NW3tnB89bx1sMc-oWoGyyl7XgnkEo_TNk3AdV2_IrKq65K-z0QsfXGH67nQyTQjD-PFbemk7j8PY0d65aO4eTyfEWHU3eMtjoo68LbVUtLg8buUpIMusCh2QDbkvFx8jxseTAgDVC50wi24woUmXTLC8LzAgnSJWzEup9b7zvkWayEUf-adS-2-Hc6v6rQ3zAdXOTtMKnKenPuCvb17ThRV7W5aB4OZKuXlHbhP3XBWccIXqYdkKA_gJy-gjbsC5H646TfRyK0_blZNrm9zzkt6k4QgfZmBNQEUHXOjpm1q2fDIGgFTx4mN8D68nokGFTs1SDH75MYZOT8A-noX9WMjlFISfBtxGC1_oBmpOCVs99D2x62VpqzAvYRhaOuBwQg9OJCVhDhVWiYnm7CFPesNcmy7i2tXl29agOUZS9YERefLuDrE1-Q4T2F3Noa-6Sdke577op6L92bP6CizXHYN15Ls-sPGxep6f0dTDVFzE_3vF1WG-_MoGB7HwRur82oDG2Oy-hhhb5BweJ26BLlFT_2_QMG7geb4XHFI5pNtnfrdcNLkI3CK857qDCMy7ZHr4igBGFoDQvAAYsEUjhj--L2pSE-EmJtG7uRjNty0rdd0H1ZauGpRBqCBKXcj3T3OfLIeP5KVGV6cWwql-7n7M1DG_GrE1fDbmpUKd_uv6dB0VCfzpwSecGpNfU5UQ7fOc3h6ZQLV7AMmJGvyW4rprjm1pJJqB-MTStP6ol3sUX5d0dVN_QUlDZbMLbHZ82puoBdDwayDdUiBw=w1200",
+      "https://lh3.googleusercontent.com/pw/AP1GczPmJ93etrXmH1xNbnkwRJmxyvC5nowFb9RrlVL0XafvSzGvYQ5abaeS094O2wzPx9yQ6RXfNvsOUK2iyzAzNBetq9RMbO38CPGRmMkwg0R6NuUEgq85pK-cOLIvYyukGGJYpq7nWYqh8cDozgpoER_FSE2BpBTVb5VZPT3A-6kiPE0Ws-3a-TKGZh-qDPqe4-FrdsIoAwGZUgdrMSiBG20o-mDBbG49XlApEagyWLwq85juflFto2ibdEfNDu6rcPB2bd9t63kBKVOnjJruFY22f3r6WwLBgj1ffxJj8HV1CRe93brzeuNw498iAqbW8jT0GW5o_Xylv7MgPVZHqOR9j5Tvq-rSZh7J2XNvUuQxwGXOaUFV-b-pJeqTfu4p7haeO7tcoV4POFqkgXdlyfbiZNcLL-Jo4MiXEtYDibzMdMxy4ntvywgGkkAyis-_A4FDaF7fjWt-4cFD6SqCkMiwm-pDqMJ65oiuPrzgaW4QwNkkFhXMRR5YbC112jUjo4ezKSENbRJokuSMau3nAnBvKGZ_RXr0H7fye5IV3j3_TQWSbO5k7QK0gHllE8clOU7-L8hot11sDSwsMuxU6Jo2fWIqXnliHuniyfvLk9V-HzEc1o3uHAkseVMevqBT-p-W3IkV52R678GTk5mS18H_mQC6J307dVgd-1tddwtWvvxQQC0MZFpy1XIidqD02kRKvySX7NSsgbHFzlhCFFWtek19tHh0OvcUiVZscGd7lo9zqKnl84YY10GCCfHYO7djpi8-z9WEEp9CbNL9gYqrdWPinXly6Y2w7FAopCVV6nZHHedyDH51z1LLLZ2rG7bqQP6dzP1jBt9Hd4Vi4gvSJY1r7vVHD7XthJNLjLBy1nGr2xQKjd1wgMtvwcNo6Oj8YgVx-tIagnYcsZQSeLmpisR-qhs15juKrx1V1i5mOxRjA7XB1JKKZh-ZGwcYo26oodvf6GVX2VVzR9ntLqV5zVQBUKi0c8pEROtnmuKJBCmtgvWjl2XZU_faT_8zWhlvfo730cIuwBXj1ABh9g=w1200"
+    ];
+    let lbIdx=0;
+    function openLb(i){lbIdx=i;document.getElementById('lbImg').src=lbImgs[i];document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
+    function closeLb(e){if(e.target===document.getElementById('lightbox'))closeLbBtn()}
+    function closeLbBtn(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
+    function navLb(d){lbIdx=(lbIdx+d+lbImgs.length)%lbImgs.length;document.getElementById('lbImg').src=lbImgs[lbIdx]}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLbBtn();if(e.key==='ArrowLeft')navLb(-1);if(e.key==='ArrowRight')navLb(1)});
+  </script>
+</section>
+
+<!-- ======== CTA FINAL ======== -->
+<section class="final-cta">
+  <div class="container reveal">
+    <div class="kicker mx-auto" style="justify-content:center">Vamos começar?</div>
+    <h2>Pronto pra transformar seu projeto com leveza?</h2>
+    <p>Traga a ideia, a foto ou o projeto. A gente projeta, corta e entrega o que você imaginou — em EPS, em Sinop, do jeito certo.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/5566997771298?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20conversar%20sobre%20um%20projeto" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1a8 8 0 0 0 3.8 1h.3a8 8 0 0 0 5.6-13.4Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3.4Zm3.6-4.9c-.2-.1-1.2-.6-1.4-.6s-.3-.1-.5.1-.5.6-.6.8-.3.2-.5.1a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 .1-.1 0-.3 0-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3h-.4a.8.8 0 0 0-.6.3 2.4 2.4 0 0 0-.7 1.8 4.2 4.2 0 0 0 .9 2.2 9.5 9.5 0 0 0 3.6 3.2c1.3.6 1.8.6 2.5.5a2.1 2.1 0 0 0 1.4-1 1.7 1.7 0 0 0 .1-1c0-.1-.2-.2-.4-.3Z"/></svg>
+        Chamar no WhatsApp agora
+      </a>
+    </div>
+    <p class="note">📍 Atendemos Sinop e toda a região de Mato Grosso</p>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#topo" class="brand">
+          <div class="mark"><svg viewBox="0 0 24 24"><path d="M4 5c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v2c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V5zm2 5h12v9H6V10z"/></svg></div>
+          <div class="brand-text"><strong>Isopor Moldura</strong><span>Sinop — MT</span></div>
+        </a>
+        <p>Se dá pra imaginar, a gente corta. Molduras, fachadas e construção em EPS sob medida.</p>
+      </div>
+      <div>
+        <h5>Produtos</h5>
+        <ul>
+          <li>🪟 Molduras internas e externas</li>
+          <li>🏢 Fachadas</li>
+          <li>🌂 Marquises</li>
+          <li>🧱 Blocos falsos e placas</li>
+          <li>✨ Forro em EPS</li>
+          <li>🏠 Construção com EPS</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li>📱 <a href="https://wa.me/5566997771298" target="_blank" rel="noopener">(66) 99777-1298</a></li>
+          <li>📍 Sinop — MT</li>
+          <li>📷 <a href="#">@isopormoldurasinnop</a></li>
+          <li>🕐 [Seg a Sex, 8h às 18h]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <strong style="color:rgba(255,255,255,.7)">Isopor Moldura Sinop</strong> — Se dá pra imaginar, a gente corta. © 2026
+    </div>
+  </div>
+</footer>
+
+<!-- ======== WA FLOAT ======== -->
+<a href="https://wa.me/5566997771298?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Isopor%20Moldura%20Sinop" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1a8 8 0 0 0 3.8 1h.3a8 8 0 0 0 5.6-13.4Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3.4Zm3.6-4.9c-.2-.1-1.2-.6-1.4-.6s-.3-.1-.5.1-.5.6-.6.8-.3.2-.5.1a5.4 5.4 0 0 1-2.7-2.3c-.2-.3.2-.3.5-1 .1-.1 0-.3 0-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3h-.4a.8.8 0 0 0-.6.3 2.4 2.4 0 0 0-.7 1.8 4.2 4.2 0 0 0 .9 2.2 9.5 9.5 0 0 0 3.6 3.2c1.3.6 1.8.6 2.5.5a2.1 2.1 0 0 0 1.4-1 1.7 1.7 0 0 0 .1-1c0-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  const toggle=document.getElementById('menuToggle');
+  const links=document.getElementById('navLinks');
+  toggle.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+  // Scroll reveal
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
